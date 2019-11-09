@@ -9,29 +9,26 @@ import './Main.less';
 
 export const Main = () => {
   return (
-    <div id="main">
-      <div>
+    <div className="Main">
+      <div className="Main--side">
         <Ability
           id={ABILITY_NAMES['str'].toLowerCase()}
           name={ABILITY_NAMES['str']}
-          className="Ability"
         />
         <Ability
           id={ABILITY_NAMES['con'].toLowerCase()}
           name={ABILITY_NAMES['con']}
-          className="Ability"
         />
         <Ability
           id={ABILITY_NAMES['dex'].toLowerCase()}
           name={ABILITY_NAMES['dex']}
-          className="Ability"
         />
       </div>
-      <div>
+      <div className="Main--mid">
         <Character />
         <Combat />
       </div>
-      <div>
+      <div className="Main--side">
         <Ability
           id={ABILITY_NAMES['wis'].toLowerCase()}
           name={ABILITY_NAMES['wis']}

@@ -84,25 +84,23 @@ export const Combat = ({
             </td>
           </tr>
           <tr className="Combat--tr">
-            <td className="Combat--td-small">
+            <td className="Combat--td-small Combat--col">
               <div className="Combat--box Combat--mid-space">
                 <div className="Combat__label">Passive Perception</div>
                 <div className="Combat__input">
                   <Input
                     id="passivePerception"
-                    className="PassivePerception"
                     type="text"
                     value={passivePerception}
                     onChange={handleChange('passivePerception')}
                   />
                 </div>
               </div>
-              <div className="Combat--box ">
+              <div className="Combat--box Combat__speed">
                 <div className="Combat__label">Speed</div>
                 <div className="Combat__input">
                   <Input
                     id="speed"
-                    className="Speed"
                     type="text"
                     value={speed}
                     onChange={handleChange('speed')}
@@ -116,7 +114,6 @@ export const Combat = ({
                 <div className="Combat__input">
                   <Input
                     id="hitPoints"
-                    className="HitPoints"
                     type="text"
                     value={hitPoints}
                     onChange={handleChange('hitPoints')}
@@ -130,7 +127,6 @@ export const Combat = ({
                 <div className="Combat__input">
                   <Input
                     id="initiativeBonus"
-                    className="InitiativeBonus"
                     type="text"
                     value={initiativeBonus}
                     onChange={handleChange('initiativeBonus')}
@@ -143,7 +139,6 @@ export const Combat = ({
                 <div className="Combat__input">
                   <Input
                     id="proficiencyBonus"
-                    className="ProficiencyBonus"
                     type="text"
                     value={proficiencyBonus}
                     onChange={handleChange('proficiencyBonus')}
@@ -159,7 +154,6 @@ export const Combat = ({
                 <div className="Combat__input">
                   <Input
                     id="hitDice"
-                    className="HitDice"
                     type="text"
                     value={hitDice}
                     onChange={handleChange('hitDice')}
@@ -173,7 +167,6 @@ export const Combat = ({
                 <div className="Combat__input">
                   <Input
                     id="tempHitPoints"
-                    className="TempHitPoints"
                     type="text"
                     value={tempHitPoints}
                     onChange={handleChange('tempHitPoints')}

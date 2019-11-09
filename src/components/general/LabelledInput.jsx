@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './LabelledInput.less';
 import Input from './Input.jsx';
+
+import './LabelledInput.less';
 
 export const LabelledInput = ({ id, label, type, value, onChange }) => {
   return (

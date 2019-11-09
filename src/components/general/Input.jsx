@@ -1,12 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Input = ({ id, type, onChange, ...props }) => (
-  <input id={id} type={type} onChange={onChange} {...props} />
+import './Input.less';
+
+export const Input = ({ id, className, type, onChange, ...props }) => (
+  <input
+    id={id}
+    className={'Input ' + className}
+    type={type}
+    onChange={onChange}
+    {...props}
+  />
 );
 
 Input.propTypes = {
   id: PropTypes.string,
+  className: PropTypes.string,
   type: PropTypes.string,
   onChange: PropTypes.func,
 };
