@@ -7,6 +7,8 @@ import {
   editAlignment,
   editBackground,
 } from '../actions/CharacterActions';
+import { editProficiencyBonus } from '../actions/CombatActions';
+import calculateProficiencyBonus from '../functions/calculateProficiencyBonus';
 import dispatchIfInt from '../functions/dispatchIfInt';
 
 export const applyCharacter = (key, value) => dispatch => {
@@ -18,7 +20,7 @@ export const applyCharacter = (key, value) => dispatch => {
       dispatch(editRace(value));
       break;
     case 'level':
-      dispatchIfInt(value, editLevel)(dispatch);
+      dispatchIfInt(value, test => test)(dispatchMultiple(dispatch));
       break;
     case 'class':
       dispatch(editClass(value));
@@ -35,4 +37,9 @@ export const applyCharacter = (key, value) => dispatch => {
     default:
       break;
   }
+};
+
+const dispatchMultiple = dispatch => value => {
+  dispatch(editLevel(value));
+  dispatch(editProficiencyBonus(calculateProficiencyBonus(value)));
 };

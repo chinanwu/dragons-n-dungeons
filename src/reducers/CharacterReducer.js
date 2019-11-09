@@ -11,7 +11,7 @@ import {
 
 export const defaultState = {
   name: '',
-  level: 0,
+  level: 1,
   race: '',
   cClass: '',
   experience: 0,
