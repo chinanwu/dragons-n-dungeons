@@ -7,7 +7,7 @@ import {
   editAlignment,
   editBackground,
 } from '../actions/CharacterActions';
-import dispatchIfInt from '../functions/dispatchIfInt.js';
+import dispatchIfInt from '../functions/dispatchIfInt';
 
 export const applyCharacter = (key, value) => dispatch => {
   switch (key) {

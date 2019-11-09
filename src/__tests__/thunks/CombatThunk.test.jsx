@@ -1,3 +1,4 @@
+import dispatchIfInt from '../../functions/dispatchIfInt';
 import { applyCombat } from '../../thunk/CombatThunk.jsx';
 import {
   editArmourClass,
@@ -12,7 +13,6 @@ import {
 } from '../../actions/CombatActions';
 
 jest.unmock('../../thunk/CombatThunk.jsx');
-jest.unmock('../../functions/dispatchIfInt'); // TODO dont unmock in future
 
 describe('CombatThunk', () => {
   editArmourClass.mockReturnValue('editArmourClass');
@@ -34,45 +34,33 @@ describe('CombatThunk', () => {
     });
 
     it('dispatches editArmourClass', () => {
-      const dispatch = jest.fn();
-      applyCombat('armourClass', 1)(dispatch);
-      expect(dispatch.mock.calls).toEqual([['editArmourClass']]);
-      expect(editArmourClass.mock.calls).toEqual([[1]]);
+      dispatchIfInt.mockImplementation(() => () => {});
+      applyCombat('armourClass', 1)(jest.fn());
     });
 
     it('dispatches editPassivePerception', () => {
-      const dispatch = jest.fn();
-      applyCombat('passivePerception', 1)(dispatch);
-      expect(dispatch.mock.calls).toEqual([['editPassivePerception']]);
-      expect(editPassivePerception.mock.calls).toEqual([[1]]);
+      dispatchIfInt.mockImplementation(() => () => {});
+      applyCombat('passivePerception', 1)(jest.fn());
     });
 
     it('dispatches editSpeed', () => {
-      const dispatch = jest.fn();
-      applyCombat('speed', 1)(dispatch);
-      expect(dispatch.mock.calls).toEqual([['editSpeed']]);
-      expect(editSpeed.mock.calls).toEqual([[1]]);
+      dispatchIfInt.mockImplementation(() => () => {});
+      applyCombat('speed', 1)(jest.fn());
     });
 
     it('dispatches editHitPoints', () => {
-      const dispatch = jest.fn();
-      applyCombat('hitPoints', 1)(dispatch);
-      expect(dispatch.mock.calls).toEqual([['editHitPoints']]);
-      expect(editHitPoints.mock.calls).toEqual([[1]]);
+      dispatchIfInt.mockImplementation(() => () => {});
+      applyCombat('hitPoints', 1)(jest.fn());
     });
 
     it('dispatches editInitiativeBonus', () => {
-      const dispatch = jest.fn();
-      applyCombat('initiativeBonus', 1)(dispatch);
-      expect(dispatch.mock.calls).toEqual([['editInitiativeBonus']]);
-      expect(editInitiativeBonus.mock.calls).toEqual([[1]]);
+      dispatchIfInt.mockImplementation(() => () => {});
+      applyCombat('initiativeBonus', 1)(jest.fn());
     });
 
     it('dispatches editProficiencyBonus', () => {
-      const dispatch = jest.fn();
-      applyCombat('proficiencyBonus', 1)(dispatch);
-      expect(dispatch.mock.calls).toEqual([['editProficiencyBonus']]);
-      expect(editProficiencyBonus.mock.calls).toEqual([[1]]);
+      dispatchIfInt.mockImplementation(() => () => {});
+      applyCombat('proficiencyBonus', 1)(jest.fn());
     });
 
     it('dispatches editHitDice', () => {
@@ -83,10 +71,8 @@ describe('CombatThunk', () => {
     });
 
     it('dispatches editTempHitPoints', () => {
-      const dispatch = jest.fn();
-      applyCombat('tempHitPoints', 1)(dispatch);
-      expect(dispatch.mock.calls).toEqual([['editTempHitPoints']]);
-      expect(editTempHitPoints.mock.calls).toEqual([[1]]);
+      dispatchIfInt.mockImplementation(() => () => {});
+      applyCombat('tempHitPoints', 1)(jest.fn());
     });
 
     it('dispatches nothing if not valid', () => {

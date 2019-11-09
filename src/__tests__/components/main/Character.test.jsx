@@ -5,8 +5,11 @@ import {
   Character,
   mapStateToProps,
 } from '../../../components/main/Character.jsx';
+import validateEvent from '../../../functions/validateEvent';
+import { defaultState } from '../../../reducers/CharacterReducer';
 
 jest.unmock('../../../components/main/Character.jsx');
+jest.unmock('../../../reducers/CharacterReducer');
 
 describe('Character component', () => {
   describe('rendering', () => {
@@ -18,6 +21,7 @@ describe('Character component', () => {
 
   describe('behaviour', () => {
     it('changes detail', () => {
+      validateEvent.mockReturnValue(true);
       const onChange = jest.fn();
       const event = {
         target: {
@@ -28,6 +32,38 @@ describe('Character component', () => {
       expect(wrapper.getElement()).toMatchSnapshot();
       wrapper.find('#characterName').simulate('change', event);
       expect(onChange.mock.calls).toEqual([['name', 'test2']]);
+    });
+
+    it('changes detail for number input', () => {
+      const onChange = jest.fn();
+      const event = 1;
+      const wrapper = shallow(<Character name="test" onChange={onChange} />);
+      expect(wrapper.getElement()).toMatchSnapshot();
+      wrapper.find('#characterLevel').simulate('keydown', event);
+      expect(onChange.mock.calls).toEqual([['level', 1]]);
+    });
+
+    it('sets default state if target is null', () => {
+      validateEvent.mockReturnValue(true);
+      const onChange = jest.fn();
+      const event = {
+        target: {
+          value: null,
+        },
+      };
+      const wrapper = shallow(<Character name="test" onChange={onChange} />);
+      expect(wrapper.getElement()).toMatchSnapshot();
+      wrapper.find('#characterName').simulate('change', event);
+      expect(onChange.mock.calls).toEqual([['name', defaultState['name']]]);
+    });
+
+    it('does nothing with invalid event', () => {
+      validateEvent.mockReturnValue(false);
+      const onChange = jest.fn();
+      const wrapper = shallow(<Character name="test" onChange={onChange} />);
+      expect(wrapper.getElement()).toMatchSnapshot();
+      wrapper.find('#characterName').simulate('change');
+      expect(onChange).not.toHaveBeenCalled();
     });
   });
 

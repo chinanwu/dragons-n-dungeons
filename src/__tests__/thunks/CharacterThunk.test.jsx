@@ -1,3 +1,4 @@
+import dispatchIfInt from '../../functions/dispatchIfInt';
 import { applyCharacter } from '../../thunk/CharacterThunk.jsx';
 import {
   editName,
@@ -10,7 +11,6 @@ import {
 } from '../../actions/CharacterActions';
 
 jest.unmock('../../thunk/CharacterThunk.jsx');
-jest.unmock('../../functions/dispatchIfInt'); // TODO dont unmock in future
 
 describe('CharacterThunk', () => {
   editName.mockReturnValue('editName');
@@ -37,10 +37,8 @@ describe('CharacterThunk', () => {
     });
 
     it('dispatches editLevel', () => {
-      const dispatch = jest.fn();
-      applyCharacter('level', 1)(dispatch);
-      expect(dispatch.mock.calls).toEqual([['editLevel']]);
-      expect(editLevel.mock.calls).toEqual([[1]]);
+      dispatchIfInt.mockImplementation(() => () => {});
+      applyCharacter('level', 1)(jest.fn());
     });
 
     it('dispatches editClass', () => {
@@ -51,10 +49,8 @@ describe('CharacterThunk', () => {
     });
 
     it('dispatches editExperience', () => {
-      const dispatch = jest.fn();
-      applyCharacter('experience', 100)(dispatch);
-      expect(dispatch.mock.calls).toEqual([['editExperience']]);
-      expect(editExperience.mock.calls).toEqual([[100]]);
+      dispatchIfInt.mockImplementation(() => () => {});
+      applyCharacter('experience', 100)(jest.fn());
     });
 
     it('does nothing if experience passed in is not a int', () => {

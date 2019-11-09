@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { ABILITY_SKILLS } from '../../constants/Abilities';
+import isNumber from '../../functions/isNumber';
+import validateEvent from '../../functions/validateEvent';
 import { applyAbilityProxy } from '../../thunk/AbilityThunk.jsx';
 import { defaultScore } from '../../reducers/AbilityReducer';
 import Input from '../general/Input.jsx';
@@ -13,11 +15,10 @@ import './Ability.less';
 export const Ability = ({ id, name, score, modifier, onChange }) => {
   const handleChange = useCallback(
     event => {
-      if (event && event.target) {
+      if (validateEvent(event, true)) {
         if (event.target.value) {
-          let num = parseInt(event.target.value);
+          let num = isNumber(event.target.value);
           if (num) {
-            // TODO: If greater than max or less than min, do special effect?
             num = num > 30 ? 30 : num < 0 ? 0 : num;
             onChange(name, num);
           }
@@ -25,6 +26,14 @@ export const Ability = ({ id, name, score, modifier, onChange }) => {
           onChange(name, defaultScore);
         }
       }
+    },
+    [onChange]
+  );
+
+  const handleKeyDown = useCallback(
+    num => {
+      const validNum = num > 30 ? 30 : num < 0 ? 0 : num;
+      onChange(name, validNum);
     },
     [onChange]
   );
@@ -37,9 +46,11 @@ export const Ability = ({ id, name, score, modifier, onChange }) => {
           <Input
             id="abilityScore"
             className="AbilityScore"
-            type="text"
+            type="number"
             maxLength={2}
             value={score}
+            defaultInput={defaultScore}
+            onKeyDown={handleKeyDown}
             onChange={handleChange}
           />
           <div className="AbilityModifier">{modifier}</div>

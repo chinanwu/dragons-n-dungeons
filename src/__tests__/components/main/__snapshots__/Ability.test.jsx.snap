@@ -16,11 +16,13 @@ exports[`Ability component behaviour changes null input to default score 1`] = `
     <div
       className="Ability--left"
     >
-      <input
+      <Input
         className="AbilityScore"
+        defaultInput={0}
         id="abilityScore"
         maxLength={2}
         onChange={[Function]}
+        onKeyDown={[Function]}
         type="number"
       />
       <div
@@ -59,11 +61,103 @@ exports[`Ability component behaviour changes out of bounds input to max or min 1
     <div
       className="Ability--left"
     >
-      <input
+      <Input
         className="AbilityScore"
+        defaultInput={0}
         id="abilityScore"
         maxLength={2}
         onChange={[Function]}
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <div
+        className="AbilityModifier"
+      />
+    </div>
+    <div
+      className="Ability--right"
+    >
+      <Skill
+        id="strengthSkill"
+        name="Saving Throws"
+      />
+      <Skill
+        id="strengthSkill"
+        name="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour changes value to be within boundaries when up arrow is pressed 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="AbilityName"
+  >
+    Strength
+  </div>
+  <div
+    className="AbilityContent"
+  >
+    <div
+      className="Ability--left"
+    >
+      <Input
+        className="AbilityScore"
+        defaultInput={0}
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <div
+        className="AbilityModifier"
+      />
+    </div>
+    <div
+      className="Ability--right"
+    >
+      <Skill
+        id="strengthSkill"
+        name="Saving Throws"
+      />
+      <Skill
+        id="strengthSkill"
+        name="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour changes value when up arrow is pressed 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="AbilityName"
+  >
+    Strength
+  </div>
+  <div
+    className="AbilityContent"
+  >
+    <div
+      className="Ability--left"
+    >
+      <Input
+        className="AbilityScore"
+        defaultInput={0}
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        onKeyDown={[Function]}
         type="number"
       />
       <div
@@ -102,11 +196,13 @@ exports[`Ability component behaviour does nothing  if invalid input 1`] = `
     <div
       className="Ability--left"
     >
-      <input
+      <Input
         className="AbilityScore"
+        defaultInput={0}
         id="abilityScore"
         maxLength={2}
         onChange={[Function]}
+        onKeyDown={[Function]}
         type="number"
       />
       <div
@@ -145,11 +241,13 @@ exports[`Ability component behaviour does nothing if event is null 1`] = `
     <div
       className="Ability--left"
     >
-      <input
+      <Input
         className="AbilityScore"
+        defaultInput={0}
         id="abilityScore"
         maxLength={2}
         onChange={[Function]}
+        onKeyDown={[Function]}
         type="number"
       />
       <div
@@ -188,11 +286,13 @@ exports[`Ability component behaviour saves changed input 1`] = `
     <div
       className="Ability--left"
     >
-      <input
+      <Input
         className="AbilityScore"
+        defaultInput={0}
         id="abilityScore"
         maxLength={2}
         onChange={[Function]}
+        onKeyDown={[Function]}
         type="number"
       />
       <div
@@ -231,11 +331,13 @@ exports[`Ability component rendering renders Ability 1`] = `
     <div
       className="Ability--left"
     >
-      <input
+      <Input
         className="AbilityScore"
+        defaultInput={0}
         id="abilityScore"
         maxLength={2}
         onChange={[Function]}
+        onKeyDown={[Function]}
         type="number"
       />
       <div

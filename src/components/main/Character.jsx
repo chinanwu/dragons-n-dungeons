@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import validateEvent from '../../functions/validateEvent';
 import { applyCharacter } from '../../thunk/CharacterThunk.jsx';
 import { defaultState } from '../../reducers/CharacterReducer';
 import LabelledInput from '../general/LabelledInput.jsx';
@@ -21,7 +22,7 @@ export const Character = ({
   const handleChange = type =>
     useCallback(
       event => {
-        if (event && event.target) {
+        if (validateEvent(event, true)) {
           if (event.target.value) {
             onChange(type, event.target.value.toString());
           } else {
@@ -31,6 +32,9 @@ export const Character = ({
       },
       [onChange]
     );
+
+  const handleKeyDown = type =>
+    useCallback(num => onChange(type, num), [onChange]);
 
   return (
     <div className="Character">
@@ -48,9 +52,10 @@ export const Character = ({
           <LabelledInput
             id="characterLevel"
             label="Level: "
-            type="text"
+            type="number"
             value={level}
             onChange={handleChange('level')}
+            onKeyDown={handleKeyDown('level')}
           />
           <LabelledInput
             id="characterRace"
@@ -71,9 +76,10 @@ export const Character = ({
           <LabelledInput
             id="characterExperience"
             label="Experience: "
-            type="text"
+            type="number"
             value={experience}
             onChange={handleChange('experience')}
+            onKeyDown={handleKeyDown('experience')}
           />
           <LabelledInput
             id="characterAlignment"

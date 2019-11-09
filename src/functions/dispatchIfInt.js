@@ -1,4 +1,6 @@
+import isNumber from './isNumber';
+
 export default (value, actionFn) => dispatch => {
-  const test = parseInt(value, 10);
-  !isNaN(test) ? dispatch(actionFn(test)) : null;
+  const test = isNumber(value);
+  test !== null ? dispatch(actionFn(test)) : null;
 };

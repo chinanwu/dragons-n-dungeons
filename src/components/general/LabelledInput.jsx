@@ -5,7 +5,14 @@ import Input from './Input.jsx';
 
 import './LabelledInput.less';
 
-export const LabelledInput = ({ id, label, type, value, onChange }) => {
+export const LabelledInput = ({
+  id,
+  label,
+  type,
+  value,
+  onChange,
+  onKeyDown,
+}) => {
   return (
     <div className="LabelledInput">
       <label className="LabelledInput__label" htmlFor={id}>
@@ -17,6 +24,7 @@ export const LabelledInput = ({ id, label, type, value, onChange }) => {
         type={type}
         value={value}
         onChange={onChange}
+        onKeyDown={onKeyDown}
       />
     </div>
   );
@@ -28,6 +36,7 @@ LabelledInput.propTypes = {
   type: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
+  onKeyDown: PropTypes.func,
 };
 
 export default LabelledInput;
