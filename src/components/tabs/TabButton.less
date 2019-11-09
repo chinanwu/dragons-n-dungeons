@@ -1,0 +1,66 @@
+@import '../styling/colours.less';
+
+.TabButton {
+  display: block;
+  padding: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.TabButton--light {
+  background-color: @passive-tab-background-colour;
+  color: @passive-tab-font-colour;
+}
+
+.TabButton--light:hover {
+  background-color: @passive-tab-background-colour--hover;
+}
+
+.TabButton--dark {
+  border: @tab-border-width @tab-border-style @tab-border-colour--dark;
+  border-bottom: none;
+  background-color: @passive-tab-background-colour-dark;
+  color: @passive-tab-font-colour-dark;
+}
+
+.TabButton--halloween {
+  color: @passive-tab-font-colour-halloween;
+}
+
+.TabButton--active {
+  background-color: @active-tab-background-colour;
+  color: @active-tab-font-colour;
+}
+
+.TabButton--active:hover {
+  background-color: @active-tab-background-colour--hover;
+  color: @active-tab-font-colour--hover;
+}
+
+.TabButton--active.TabButton--dark {
+  background-color: @active-tab-background-colour-dark;
+  color: @active-tab-font-colour-dark;
+}
+
+.TabButton--active.TabButton--halloween {
+  background-color: @active-tab-background-colour-halloween;
+  color: @active-tab-font-colour-halloween;
+}
+
+.TabButton--disabled {
+  background-color: @disabled-tab-background-colour;
+  color: @disabled-tab-font-colour;
+}
+
+.TabButton--disabled.TabButton--dark {
+  background-color: @disabled-tab-background-colour-dark;
+  color: @disabled-tab-font-colour-dark;
+}
+
+.TabButton--disabled.TabButton--halloween {
+  background-color: @disabled-tab-background-colour-halloween;
+  color: @disabled-tab-font-colour-halloween;
+}

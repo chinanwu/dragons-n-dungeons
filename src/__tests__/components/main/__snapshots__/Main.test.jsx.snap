@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component rendering renders Main 1`] = `
+<div
+  id="main"
+>
+  <div>
+    <Memo(Connect(Ability))
+      id="strength"
+      name="Strength"
+    />
+    <Memo(Connect(Ability))
+      id="constitution"
+      name="Constitution"
+    />
+    <Memo(Connect(Ability))
+      id="dexterity"
+      name="Dexterity"
+    />
+  </div>
+  <div>
+    <Memo(Connect(Character)) />
+    <Memo(Connect(Combat)) />
+  </div>
+  <div>
+    <Memo(Connect(Ability))
+      id="wisdom"
+      name="Wisdom"
+    />
+    <Memo(Connect(Ability))
+      id="intelligence"
+      name="Intelligence"
+    />
+    <Memo(Connect(Ability))
+      id="charisma"
+      name="Charisma"
+    />
+  </div>
+</div>
+`;

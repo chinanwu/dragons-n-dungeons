@@ -1,0 +1,48 @@
+@import '../styling/spacing.less';
+
+.Ability {
+  width: 230px;
+  height: 170px;
+  border: 1px solid black;
+}
+.AbilityName {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.AbilityContent {
+  display: flex;
+  margin-top: 8px;
+}
+
+.Ability--left {
+  display: block;
+  width: 30%;
+  text-align: center;
+}
+
+.AbilityScore {
+  background-color: inherit;
+  font-size: @larger-font;
+  border: none;
+  width: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.AbilityModifier {
+  font-size: 21px;
+}
+
+.Ability--right {
+  display: flex;
+  flex-direction: column;
+}

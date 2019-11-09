@@ -12,7 +12,18 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
-      { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] }
+      { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images/',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [new HtmlWebpackPlugin({ template: path.resolve('./index.html') })],

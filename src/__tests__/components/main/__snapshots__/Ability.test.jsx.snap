@@ -1,0 +1,259 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ability component behaviour changes null input to default score 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="AbilityName"
+  >
+    Strength
+  </div>
+  <div
+    className="AbilityContent"
+  >
+    <div
+      className="Ability--left"
+    >
+      <input
+        className="AbilityScore"
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        type="number"
+      />
+      <div
+        className="AbilityModifier"
+      />
+    </div>
+    <div
+      className="Ability--right"
+    >
+      <Skill
+        id="strengthSkill"
+        name="Saving Throws"
+      />
+      <Skill
+        id="strengthSkill"
+        name="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour changes out of bounds input to max or min 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="AbilityName"
+  >
+    Strength
+  </div>
+  <div
+    className="AbilityContent"
+  >
+    <div
+      className="Ability--left"
+    >
+      <input
+        className="AbilityScore"
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        type="number"
+      />
+      <div
+        className="AbilityModifier"
+      />
+    </div>
+    <div
+      className="Ability--right"
+    >
+      <Skill
+        id="strengthSkill"
+        name="Saving Throws"
+      />
+      <Skill
+        id="strengthSkill"
+        name="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour does nothing  if invalid input 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="AbilityName"
+  >
+    Strength
+  </div>
+  <div
+    className="AbilityContent"
+  >
+    <div
+      className="Ability--left"
+    >
+      <input
+        className="AbilityScore"
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        type="number"
+      />
+      <div
+        className="AbilityModifier"
+      />
+    </div>
+    <div
+      className="Ability--right"
+    >
+      <Skill
+        id="strengthSkill"
+        name="Saving Throws"
+      />
+      <Skill
+        id="strengthSkill"
+        name="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour does nothing if event is null 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="AbilityName"
+  >
+    Strength
+  </div>
+  <div
+    className="AbilityContent"
+  >
+    <div
+      className="Ability--left"
+    >
+      <input
+        className="AbilityScore"
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        type="number"
+      />
+      <div
+        className="AbilityModifier"
+      />
+    </div>
+    <div
+      className="Ability--right"
+    >
+      <Skill
+        id="strengthSkill"
+        name="Saving Throws"
+      />
+      <Skill
+        id="strengthSkill"
+        name="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour saves changed input 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="AbilityName"
+  >
+    Strength
+  </div>
+  <div
+    className="AbilityContent"
+  >
+    <div
+      className="Ability--left"
+    >
+      <input
+        className="AbilityScore"
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        type="number"
+      />
+      <div
+        className="AbilityModifier"
+      />
+    </div>
+    <div
+      className="Ability--right"
+    >
+      <Skill
+        id="strengthSkill"
+        name="Saving Throws"
+      />
+      <Skill
+        id="strengthSkill"
+        name="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component rendering renders Ability 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="AbilityName"
+  >
+    Strength
+  </div>
+  <div
+    className="AbilityContent"
+  >
+    <div
+      className="Ability--left"
+    >
+      <input
+        className="AbilityScore"
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        type="number"
+      />
+      <div
+        className="AbilityModifier"
+      />
+    </div>
+    <div
+      className="Ability--right"
+    >
+      <Skill
+        id="strengthSkill"
+        name="Saving Throws"
+      />
+      <Skill
+        id="strengthSkill"
+        name="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;

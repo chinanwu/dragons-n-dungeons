@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabButton component rendering renders TabButton 1`] = `
+<div
+  aria-controls="tabPanel__undefined"
+  aria-selected={false}
+  className="TabButton"
+  id="test"
+  role="tab"
+  tabIndex={-1}
+/>
+`;
+
+exports[`TabButton component rendering renders active TabButton 1`] = `
+<div
+  aria-controls="tabPanel__undefined"
+  aria-selected={true}
+  className="TabButton TabButton--active"
+  id="test"
+  role="tab"
+  tabIndex={0}
+/>
+`;
+
+exports[`TabButton component rendering renders disabled TabButton 1`] = `
+<div
+  aria-controls="tabPanel__undefined"
+  aria-selected={false}
+  className="TabButton TabButton--disabled"
+  id="test"
+  onClick={[Function]}
+  role="tab"
+  tabIndex={-1}
+/>
+`;
+
+exports[`TabButton component rendering renders themed TabButton 1`] = `
+<div
+  aria-controls="tabPanel__undefined"
+  aria-selected={true}
+  className="TabButton TabButton--active TabButton--dark"
+  id="test"
+  role="tab"
+  tabIndex={0}
+/>
+`;

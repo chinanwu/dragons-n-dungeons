@@ -31,3 +31,7 @@ yarn-error.log*
 .cache
 .project
 *.iml
+
+*.psd
+
+package-lock.json

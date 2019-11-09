@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabList component rendering renders TabList 1`] = `
+<div
+  aria-label="Tabs"
+  className="TabList"
+  role="tablist"
+>
+  <div
+    className="TabList--left"
+  />
+  <div
+    className="TabFooter"
+  />
+</div>
+`;
+
+exports[`TabList component rendering renders TabList with empty list 1`] = `
+<div
+  aria-label="Tabs"
+  className="TabList"
+  role="tablist"
+>
+  <div
+    className="TabList--left"
+  />
+  <div
+    className="TabFooter"
+  />
+</div>
+`;
+
+exports[`TabList component rendering renders TabList with list 1`] = `
+<div
+  aria-label="Tabs"
+  className="TabList"
+  role="tablist"
+>
+  <div
+    className="TabList--left"
+  >
+    <Memo(Connect(TabButton))
+      id="tabButton__0"
+      index={0}
+      isActive={false}
+      isDisabled={false}
+      label="test-tab"
+    />
+  </div>
+  <div
+    className="TabFooter"
+  />
+</div>
+`;

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabPanels component rendering renders TabPanels 1`] = `
+<div
+  className="TabPanels"
+/>
+`;
+
+exports[`TabPanels component rendering renders TabPanels with empty panels 1`] = `
+<div
+  className="TabPanels"
+/>
+`;
+
+exports[`TabPanels component rendering renders TabPanels with panels 1`] = `
+<div
+  className="TabPanels"
+>
+  <div
+    aria-labelledby="tabButton__0"
+    id="tabPanel__0"
+  >
+    Some things
+  </div>
+  <div
+    aria-labelledby="tabButton__1"
+    id="tabPanel__1"
+  >
+    Other content
+  </div>
+</div>
+`;

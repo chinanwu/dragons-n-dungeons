@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabHeader component rendering renders TabHeader 1`] = `null`;

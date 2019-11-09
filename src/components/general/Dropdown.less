@@ -1,0 +1,83 @@
+@import '../styling/colours.less';
+
+select {
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+
+.Dropdown {
+  padding-top: 20px;
+  position: relative;
+}
+
+.Dropdown__select {
+  padding: 5px 3px 5px 3px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  box-shadow: @box-shadow-01;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.Dropdown__select--light {
+  background-color: @dropdown-button-colour;
+  color: @dropdown-button-font-colour;
+}
+
+.Dropdown__select--light:hover {
+  background-color: @dropdown-button-colour--hover;
+  color: @dropdown-button-font-colour--hover;
+  box-shadow: @box-shadow-02;
+}
+
+.Dropdown__select--light:active {
+  background-color: @dropdown-button-colour--active;
+  color: @dropdown-button-font-colour--active;
+}
+
+.Dropdown__select--dark {
+  background-color: @dropdown-button-colour-dark;
+  color: white;
+}
+
+.Dropdown__content {
+  position: absolute;
+  box-shadow: @box-shadow-03;
+  z-index: 1;
+}
+
+.Dropdown__content--hidden {
+  display: none;
+}
+
+.Dropdown__option {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.Dropdown__option--light {
+  background-color: @dropdown-selector-colour;
+  color: @main-0-contrast;
+}
+
+.Dropdown__option--light:hover {
+  background-color: @dropdown-selector-background-colour--hover;
+  color: @dropdown-selector-font-colour--hover;
+}
+
+.Dropdown__option--light:active {
+  background-color: @dropdown-selector-background-colour--active;
+  color: @dropdown-selector-font-colour--active;
+}
+
+.Dropdown__option--dark {
+  background-color: @dropdown-selector-background-colour-dark;
+}
+
+.Dropdown__option--dark:hover {
+  background-color: @dropdown-selector-background-colour-dark--hover;
+}

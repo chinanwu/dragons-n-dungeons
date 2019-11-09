@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Combat component rendering renders Combat 1`] = `
+<div
+  className="Combat"
+>
+  <div
+    className="Combat--top"
+  >
+    <div
+      className="Combat__deathSaves"
+    >
+      <div
+        className="Combat__label"
+      >
+        Death Saves
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              Fails
+            </td>
+            <td>
+              <Checkbox />
+            </td>
+            <td>
+              <Checkbox />
+            </td>
+            <td>
+              <Checkbox />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Successes
+            </td>
+            <td>
+              <Checkbox />
+            </td>
+            <td>
+              <Checkbox />
+            </td>
+            <td>
+              <Checkbox />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      className="Combat__inspiration"
+    >
+      <Checkbox />
+    </div>
+    <div
+      className="Combat__armourClass"
+    />
+  </div>
+  <div
+    className="Combat--mid"
+  />
+  <div
+    className="Combat--bottom"
+  />
+</div>
+`;

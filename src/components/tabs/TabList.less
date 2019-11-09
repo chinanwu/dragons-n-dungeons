@@ -1,0 +1,25 @@
+@import '../styling/colours.less';
+
+.TabList {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.TabList--light {
+  border-bottom: @tablist-border-width @tablist-border-style
+    @tablist-border-colour;
+  background-color: @tablist-background-colour;
+}
+
+.TabList--dark {
+  background-color: black;
+}
+
+.TabList--left {
+  display: flex;
+}
+
+.TabFooter {
+  padding-right: 20px;
+}

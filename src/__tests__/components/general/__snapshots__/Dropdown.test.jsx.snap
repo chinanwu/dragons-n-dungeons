@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown component behaviour toggles theme when dropdown option is chosen 1`] = `
+<div
+  className="Dropdown Dropdown--light"
+  id="test"
+>
+  <select
+    className="Dropdown__select Dropdown__select--light"
+    id="dropdown__select"
+    onChange={[Function]}
+  >
+    <option
+      disabled={true}
+      hidden={true}
+    />
+    <option
+      className="Dropdown__option Dropdown__option--light"
+      id="dropdown__option-0"
+      value="zero"
+    >
+      ZERO
+    </option>
+    <option
+      className="Dropdown__option Dropdown__option--light"
+      id="dropdown__option-1"
+      value="one"
+    >
+      ONE
+    </option>
+  </select>
+</div>
+`;
+
+exports[`Dropdown component rendering renders Dropdown 1`] = `
+<div
+  className="Dropdown"
+  id="test"
+>
+  <select
+    className="Dropdown__select"
+    id="dropdown__select"
+    onChange={[Function]}
+  >
+    <option
+      disabled={true}
+      hidden={true}
+    />
+  </select>
+</div>
+`;
+
+exports[`Dropdown component rendering renders Dropdown when passed options and theme 1`] = `
+<div
+  className="Dropdown Dropdown--dark"
+  id="test"
+>
+  <select
+    className="Dropdown__select Dropdown__select--dark"
+    id="dropdown__select"
+    onChange={[Function]}
+  >
+    <option
+      disabled={true}
+      hidden={true}
+    />
+    <option
+      className="Dropdown__option Dropdown__option--dark"
+      id="dropdown__option-0"
+      value="light"
+    >
+      light
+    </option>
+    <option
+      className="Dropdown__option Dropdown__option--dark"
+      id="dropdown__option-1"
+      value="dark"
+    >
+      dark
+    </option>
+    <option
+      className="Dropdown__option Dropdown__option--dark"
+      id="dropdown__option-2"
+      value="halloween"
+    >
+      halloween
+    </option>
+  </select>
+</div>
+`;

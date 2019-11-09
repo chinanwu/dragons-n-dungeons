@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component rendering renders App 1`] = `
+<Provider>
+  <Memo(Connect(Tabs))>
+    <TabHeader>
+      <Memo(Connect(Logo)) />
+    </TabHeader>
+    <Tab
+      disabled={false}
+      name="Main "
+    >
+      <Main />
+    </Tab>
+    <Tab
+      disabled={false}
+      name="Inventory"
+    >
+      Inventory
+    </Tab>
+    <Tab
+      disabled={false}
+      name="Spells"
+    >
+      Spells
+    </Tab>
+    <TabFooter>
+      <Memo(Connect(Dropdown))
+        id="themeDropdown"
+        name="Theme"
+        options={
+          Array [
+            "Light",
+            "Dark",
+            "Halloween",
+          ]
+        }
+      />
+    </TabFooter>
+  </Memo(Connect(Tabs))>
+</Provider>
+`;
