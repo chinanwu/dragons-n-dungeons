@@ -22,7 +22,7 @@ export const Character = ({
   const handleChange = type =>
     useCallback(
       event => {
-        if (validateEvent(event, true)) {
+        if (validateEvent(event)) {
           if (event.target.value) {
             onChange(type, event.target.value.toString());
           } else {

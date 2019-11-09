@@ -15,7 +15,7 @@ import './Ability.less';
 export const Ability = ({ id, name, score, modifier, onChange }) => {
   const handleChange = useCallback(
     event => {
-      if (validateEvent(event, true)) {
+      if (validateEvent(event)) {
         if (event.target.value) {
           let num = isNumber(event.target.value);
           if (num) {

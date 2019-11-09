@@ -1,1 +1,1 @@
-export default (event, additional) => event && event.target && additional;
+export default event => !!(event && event.target);

@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 
 import { Input } from '../../../components/general/Input.jsx';
-import { upArrow } from '../../../constants/Keycodes';
+import { downArrow, leftArrow, upArrow } from '../../../constants/Keycodes';
 import dispatchIfInt from '../../../functions/dispatchIfInt';
 import validateEvent from '../../../functions/validateEvent';
 
@@ -45,8 +45,67 @@ describe('Input component', () => {
     });
 
     it('decreases value by 1 when down is pressed ', () => {
-      const wrapper = shallow(<Input id="test" />);
+      validateEvent.mockReturnValue(true);
+      dispatchIfInt.mockImplementation(() => () => {});
+      const preventDefault = jest.fn();
+      const event = {
+        target: {
+          value: '1',
+        },
+        keyCode: downArrow,
+        preventDefault,
+      };
+
+      const wrapper = shallow(
+        <Input id="test" type="number" onKeyDown={jest.fn()} />
+      );
       expect(wrapper.getElement()).toMatchSnapshot();
+      wrapper.find('#test').simulate('keydown', event);
+      expect(preventDefault).toHaveBeenCalled();
+    });
+
+    it('calls onChange when any other key is pressed', () => {
+      validateEvent.mockReturnValue(true);
+      dispatchIfInt.mockImplementation(() => () => {});
+      const preventDefault = jest.fn();
+      const onChange = jest.fn();
+      const event = {
+        target: {
+          value: '1',
+        },
+        keyCode: leftArrow,
+        preventDefault,
+      };
+
+      const wrapper = shallow(
+        <Input
+          id="test"
+          type="number"
+          onKeyDown={jest.fn()}
+          onChange={onChange}
+        />
+      );
+      expect(wrapper.getElement()).toMatchSnapshot();
+      wrapper.find('#test').simulate('keydown', event);
+      expect(preventDefault).not.toHaveBeenCalled();
+      expect(onChange.mock.calls).toEqual([[event]]);
+    });
+
+    it('does nothing with invalid event', () => {
+      validateEvent.mockReturnValue(false);
+      const wrapper = shallow(<Input id="test" type="number" />);
+      expect(wrapper.getElement()).toMatchSnapshot();
+      wrapper.find('#test').simulate('keydown', null);
+    });
+
+    it('does nothing with event that has no value', () => {
+      validateEvent.mockReturnValue(true);
+      const event = {
+        target: {},
+      };
+      const wrapper = shallow(<Input id="test" type="number" />);
+      expect(wrapper.getElement()).toMatchSnapshot();
+      wrapper.find('#test').simulate('keydown', event);
     });
   });
 });

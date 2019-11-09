@@ -18,19 +18,21 @@ export const Input = ({
 }) => {
   const handleKeyDown = useCallback(
     event => {
-      if (validateEvent(event, event.target.value && event.keyCode)) {
-        switch (event.keyCode) {
-          case upArrow:
-            event.preventDefault();
-            dispatchIfInt(event.target.value, value => value + 1)(onKeyDown);
-            break;
-          case downArrow:
-            event.preventDefault();
-            dispatchIfInt(event.target.value, value => value - 1)(onKeyDown);
-            break;
-          default:
-            onChange(event);
-            break;
+      if (validateEvent(event)) {
+        if (event.target.value && event.keyCode) {
+          switch (event.keyCode) {
+            case upArrow:
+              event.preventDefault();
+              dispatchIfInt(event.target.value, value => value + 1)(onKeyDown);
+              break;
+            case downArrow:
+              event.preventDefault();
+              dispatchIfInt(event.target.value, value => value - 1)(onKeyDown);
+              break;
+            default:
+              onChange(event);
+              break;
+          }
         }
       }
     },
