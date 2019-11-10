@@ -8,7 +8,7 @@ describe('calculateHitPoints', () => {
     expect(calculated >= 1 && calculated <= 13).toBe(true);
   });
 
-  it('returns mod when hit dice is invalid', () => {
-    expect(calculateHitPoints(1, 'blah')).toEqual(1);
+  it('returns zero when hit dice is invalid and modifier is negative', () => {
+    expect(calculateHitPoints(-1, 'blah')).toEqual(0);
   });
 });

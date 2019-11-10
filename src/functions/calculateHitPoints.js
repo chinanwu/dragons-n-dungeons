@@ -11,5 +11,5 @@ export default (mod, hitDice) => {
     }
   }
 
-  return acc;
+  return acc > 0 ? acc : 0;
 };
