@@ -1,7 +1,10 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { Dropdown, mapStateToProps } from '../../../components/general/Dropdown.jsx';
+import {
+  Dropdown,
+  mapStateToProps,
+} from '../../../components/general/Dropdown.jsx';
 import getThemeClassName from '../../../functions/getThemeClassName';
 
 jest.unmock('../../../components/general/Dropdown.jsx');

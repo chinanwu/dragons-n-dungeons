@@ -13,6 +13,7 @@ export const Input = ({
   type,
   defaultInput,
   ariaChecked,
+  ariaLabel,
   ariaLabelledBy,
   onChange,
   onKeyDown,
@@ -51,6 +52,7 @@ export const Input = ({
       className={'Input ' + className}
       type={type === 'text' || type === 'number' ? 'text' : type}
       aria-checked={ariaChecked}
+      aria-label={ariaLabel}
       aria-labelledby={ariaLabelledBy}
       onChange={onChange}
       onKeyDown={type === 'number' ? handleKeyDown : null}
@@ -65,6 +67,7 @@ Input.propTypes = {
   type: PropTypes.string,
   defaultInput: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   ariaChecked: PropTypes.bool,
+  ariaLabel: PropTypes.string,
   ariaLabelledBy: PropTypes.string,
   onChange: PropTypes.func,
   onKeyDown: PropTypes.func,

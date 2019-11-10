@@ -5,7 +5,15 @@ import './Checkbox.less';
 
 import Input from './Input.jsx';
 
-export const Checkbox = ({ id, name, checked, ariaLabelledBy, onChange }) => {
+export const Checkbox = ({
+  id,
+  className,
+  name,
+  checked,
+  ariaLabel,
+  ariaLabelledBy,
+  onChange,
+}) => {
   const [isChecked, setIsChecked] = useState(checked ? checked : false);
 
   const handleChange = useCallback(
@@ -19,12 +27,13 @@ export const Checkbox = ({ id, name, checked, ariaLabelledBy, onChange }) => {
   return (
     <Input
       id={id}
-      className="Checkbox"
+      className={'Checkbox ' + className}
       name={name ? name : null}
       type="checkbox"
       role="checkbox"
       checked={isChecked}
       ariaChecked={isChecked}
+      ariaLabel={ariaLabel}
       ariaLabelledBy={ariaLabelledBy}
       onChange={handleChange}
     />
@@ -33,8 +42,11 @@ export const Checkbox = ({ id, name, checked, ariaLabelledBy, onChange }) => {
 
 Checkbox.propTypes = {
   id: PropTypes.string.isRequired,
+  className: PropTypes.string,
   name: PropTypes.string,
   checked: PropTypes.bool,
+  ariaLabel: PropTypes.string,
+  ariaLabelledBy: PropTypes.string,
   onChange: PropTypes.func,
 };
 

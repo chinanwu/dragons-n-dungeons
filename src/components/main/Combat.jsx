@@ -100,39 +100,64 @@ export const Combat = ({
               <div className="Combat--box Combat--top-large">
                 <div className="Combat__label">Death Saves</div>
                 <div className="Combat__deathSaves">
-                  <div className="Combat--col">
-                    <div>Fails</div>
-                    <div>Successes</div>
+                  <div className="Combat--col Combat__deathSavesLabels">
+                    <div id="deathSaveFailLabel">Fails</div>
+                    <div id="deathSaveSuccessLabel">Successes</div>
                   </div>
-                  <div className="Combat--col">
+                  <div className="Combat--col Combat__deathSavesCheckboxes">
                     <div className="Combat--row">
-                      <Checkbox />
-                      <Checkbox />
-                      <Checkbox />
+                      <Checkbox
+                        id="deathSaveFail-1"
+                        ariaLabelledBy="deathSaveFailLabel"
+                      />
+                      <Checkbox
+                        id="deathSaveFail-2"
+                        ariaLabelledBy="deathSaveFailLabel"
+                      />
+                      <Checkbox
+                        id="deathSaveFail-3"
+                        ariaLabelledBy="deathSaveFailLabel"
+                      />
                     </div>
                     <div className="Combat--row">
-                      <Checkbox />
-                      <Checkbox />
-                      <Checkbox />
+                      <Checkbox
+                        id="deathSaveSuccess-1"
+                        ariaLabelledBy="deathSaveSuccessLabel"
+                      />
+                      <Checkbox
+                        id="deathSaveSuccess-2"
+                        ariaLabelledBy="deathSaveSuccessLabel"
+                      />
+                      <Checkbox
+                        id="deathSaveSuccess-3"
+                        ariaLabelledBy="deathSaveSuccessLabel"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             </td>
-            <td className="Combat__inspiration">
-              <div className="Combat--box">
-                <Checkbox checked={inspiration} />
-              </div>
+            <td className="Combat--td-small Combat--box Combat__inspiration">
+              <div id="inspirationLabel">Inspiration</div>
+              <Checkbox
+                className="Combat__inspirationCheckbox"
+                id="inspirationCheckbox"
+                ariaLabelledBy="inspirationLabel"
+                checked={inspiration}
+              />
             </td>
             <td className="Combat--td-large">
               <div className="Combat--box Combat--top-large">
-                <div className="Combat__label">Armour Class</div>
+                <div id="armourClassLabel" className="Combat__label">
+                  Armour Class
+                </div>
                 <div className="Combat__input">
                   <Input
                     id="armourClass"
                     className="Combat__input--larger"
                     type="text"
                     value={armourClass}
+                    ariaLabelledBy="armourClassLabel"
                     onChange={handleChange('armourClass')}
                   />
                 </div>
@@ -142,26 +167,32 @@ export const Combat = ({
           <tr className="Combat--tr">
             <td className="Combat--td-small Combat--col">
               <div className="Combat--box Combat--mid-space">
-                <div className="Combat__label">Passive Perception</div>
+                <div id="passivePerceptionLabel" className="Combat__label">
+                  Passive Perception
+                </div>
                 <div className="Combat__input">
                   <Input
                     id="passivePerception"
                     className="Combat__input--larger"
                     type="number"
                     value={passivePerception}
+                    ariaLabelledBy="passivePerceptionLabel"
                     onKeyDown={handleKeyDown('passivePerception')}
                     onChange={handleChange('passivePerception')}
                   />
                 </div>
               </div>
               <div className="Combat--box Combat__speed">
-                <div className="Combat__label">Speed</div>
+                <div id="speedLabel" className="Combat__label">
+                  Speed
+                </div>
                 <div className="Combat__input">
                   <Input
                     id="speed"
                     className="Combat__input--larger"
                     type="number"
                     value={speed}
+                    ariaLabelledBy="speedLabel"
                     onKeyDown={handleKeyDown('speed')}
                     onChange={handleChange('speed')}
                   />
@@ -181,7 +212,9 @@ export const Combat = ({
                   >
                     +
                   </div>
-                  <div className="Combat__label">Hit Points</div>
+                  <div id="hitPointsLabel" className="Combat__label">
+                    Hit Points
+                  </div>
                   <div
                     className="Combat__hitPointsBtn"
                     role="button"
@@ -203,16 +236,18 @@ export const Combat = ({
                     className="Combat__input--largest"
                     type="number"
                     value={dynamicHitPoints}
+                    ariaLabelledBy="hitPointsLabel"
                     onKeyDown={handleDynamicHitPointsKeyDown}
                     onChange={handleDynamicHitPointsChange}
                   />
                 </div>
                 <div className="Combat__hitPointsTotal">
-                  Total:
+                  <div id="hitsPointsTotalLabel">Total:</div>
                   <Input
                     id="hitPoints"
                     type="number"
                     value={hitPoints}
+                    ariaLabelledBy="hitsPointsTotalLabel"
                     onKeyDown={handleKeyDown('hitPoints')}
                     onChange={handleChange('hitPoints')}
                   />
@@ -221,25 +256,31 @@ export const Combat = ({
             </td>
             <td className="Combat--td-small">
               <div className="Combat--box Combat--mid-space">
-                <div className="Combat__label">Initiative Bonus</div>
+                <div id="initiativeBonusLabel" className="Combat__label">
+                  Initiative Bonus
+                </div>
                 <Input
                   id="initiativeBonus"
                   className="Combat__input--larger"
                   type="number"
                   value={initiativeBonus}
+                  ariaLabelledBy="initiativeBonusLabel"
                   onKeyDown={handleKeyDown('initiativeBonus')}
                   onChange={handleChange('initiativeBonus')}
                 />
               </div>
 
               <div className="Combat--box ">
-                <div className="Combat__label">Proficiency Bonus</div>
+                <div id="proficiencyBonusLabel" className="Combat__label">
+                  Proficiency Bonus
+                </div>
                 <div className="Combat__input">
                   <Input
                     id="proficiencyBonus"
                     className="Combat__input--larger"
                     type="number"
                     value={proficiencyBonus}
+                    ariaLabelledBy="proficiencyBonusLabel"
                     onKeyDown={handleKeyDown('proficiencyBonus')}
                     onChange={handleChange('proficiencyBonus')}
                   />
@@ -250,13 +291,16 @@ export const Combat = ({
           <tr className="Combat--tr">
             <td className="Combat--td-small">
               <div className="Combat--box">
-                <div className="Combat__label">Hit Dice</div>
+                <div id="hitDiceLabel" className="Combat__label">
+                  Hit Dice
+                </div>
                 <div className="Combat__input">
                   <Input
                     id="hitDice"
                     className="Combat__input--larger"
                     type="text"
                     value={hitDice}
+                    ariaLabelledBy="hitDiceLabel"
                     onChange={handleChange('hitDice')}
                   />
                 </div>
@@ -264,13 +308,16 @@ export const Combat = ({
             </td>
             <td className="Combat--td-largest">
               <div className="Combat--box">
-                <div className="Combat__label">Temporary Hit Points</div>
+                <div id="tempHitPointsLabel" className="Combat__label">
+                  Temporary Hit Points
+                </div>
                 <div className="Combat__input">
                   <Input
                     id="tempHitPoints"
                     className="Combat__input--larger"
                     type="number"
                     value={tempHitPoints}
+                    ariaLabelledBy="tempHitPointsLabels"
                     onKeyDown={handleKeyDown('tempHitPoints')}
                     onChange={handleChange('tempHitPoints')}
                   />

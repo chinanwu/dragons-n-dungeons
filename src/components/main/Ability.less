@@ -1,3 +1,4 @@
+@import '../styling/colours.less';
 @import '../styling/fonts.less';
 
 .Ability {
@@ -30,8 +31,18 @@
   text-align: center;
 }
 
+.AbilityScore__label {
+  font-size: @font-10;
+  color: @input-label-colour;
+}
+
 .AbilityModifier {
-  font-size: 21px;
+  font-size: @font-21;
+}
+
+.AbilityModifier__label {
+  color: @input-label-colour;
+  font-size: @font-10;
 }
 
 .Ability--right {

@@ -50,6 +50,9 @@ export const Ability = ({
       <div className="AbilityName">{name}</div>
       <div className="AbilityContent">
         <div className="Ability--left">
+          <div id="abilityScoreLabel" className="AbilityScore__label">
+            Ability Score
+          </div>
           <Input
             id="abilityScore"
             className="AbilityScore"
@@ -57,12 +60,12 @@ export const Ability = ({
             maxLength={2}
             value={score}
             defaultInput={defaultScore}
+            ariaLabelledBy="abilityScoreLabel"
             onKeyDown={handleKeyDown}
             onChange={handleChange}
           />
-          <div className="AbilityScore__label">Ability Score</div>
-          <div className="AbilityModifier">{modifier}</div>
           <div className="AbilityModifier__label">Modifier</div>
+          <div className="AbilityModifier">{modifier}</div>
         </div>
         <div className="Ability--right">
           {ABILITY_SKILLS[name.toLowerCase()].map(skill => (
@@ -88,8 +91,6 @@ Ability.propTypes = {
   onChange: PropTypes.func,
 };
 
-// TODO: Maybe in the future, instead of having to make everything lowercase,
-//  it is set as lowercase in the constants file, and css styling will deal with it?
 export const mapStateToProps = (
   { ability, combat: { proficiencyBonus } },
   { name }
@@ -107,3 +108,8 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Ability);
+
+// TODO:
+// - AbilityScore:focus styling?
+// - Maybe in the future, instead of having to make everything lowercase,
+//  it is set as lowercase in the constants file, and css styling will deal with it?
