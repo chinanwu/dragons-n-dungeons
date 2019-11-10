@@ -73,7 +73,7 @@
 
 .Combat__input--larger {
   text-align: center;
-  font-size: @larger-font;
+  font-size: @font-36;
 }
 
 .Combat__speed {
@@ -82,10 +82,44 @@
 }
 
 .Combat__hitPoints {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
+}
+
+.Combat__hitPointsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 6px;
+}
+
+.Combat__hitPointsBtn {
+  cursor: pointer;
+
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.Combat__hitPointsTotal {
+  display: flex;
+  font-size: @font-18;
+  width: 90%;
+  align-self: center;
+  margin-bottom: 6px;
+}
+
+.Combat__hitPointsTotal input {
+  margin-left: 6px;
+  font-size: @font-18;
+  overflow: hidden;
 }
 
 .Combat__input--largest {
   text-align: center;
-  font-size: @largest-font;
+  font-size: @font-72;
 }

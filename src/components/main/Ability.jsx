@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import { connect } from 'react-redux';
 
 import { ABILITY_SKILLS } from '../../constants/Abilities';
@@ -7,10 +7,10 @@ import isNumber from '../../functions/isNumber';
 import validateEvent from '../../functions/validateEvent';
 import { defaultScore } from '../../reducers/AbilityReducer';
 import { applyAbilityProxy } from '../../thunk/AbilityThunk.jsx';
-import Checkbox from '../general/Checkbox.jsx';
 import Input from '../general/Input.jsx';
 
 import './Ability.less';
+import { Skill } from './Skill.jsx';
 
 export const Ability = ({
   id,
@@ -20,8 +20,6 @@ export const Ability = ({
   proficiencyBonus,
   onChange,
 }) => {
-  const [isProficient, setIsProficient] = useState(false);
-
   const handleChange = useCallback(
     event => {
       if (validateEvent(event)) {
@@ -39,13 +37,6 @@ export const Ability = ({
     [onChange]
   );
 
-  const handleProficiencyChange = useCallback(
-    checked => {
-      setIsProficient(checked);
-    },
-    [setIsProficient]
-  );
-
   const handleKeyDown = useCallback(
     num => {
       const validNum = num > 30 ? 30 : num < 0 ? 0 : num;
@@ -53,9 +44,6 @@ export const Ability = ({
     },
     [onChange]
   );
-
-  const calculateModifier = () =>
-    isProficient ? modifier + proficiencyBonus : modifier;
 
   return (
     <div id={id} className="Ability">
@@ -76,14 +64,12 @@ export const Ability = ({
         </div>
         <div className="Ability--right">
           {ABILITY_SKILLS[name.toLowerCase()].map(skill => (
-            <div className="AbilitySkill" key={skill}>
-              <Checkbox
-                checked={isProficient}
-                onChange={handleProficiencyChange}
-              />
-              <div>{calculateModifier()}</div>
-              <div>{skill}</div>
-            </div>
+            <Skill
+              key={skill}
+              skill={skill}
+              modifier={modifier}
+              proficiencyBonus={proficiencyBonus}
+            />
           ))}
         </div>
       </div>
