@@ -61,7 +61,6 @@ export const Combat = ({
     [setDynamicHitPoints]
   );
 
-  // TODO: Remove duplicate code
   const handleHitPointsClick = callback =>
     useCallback(() => {
       setDynamicHitPoints(dynamicHitPoints => callback(dynamicHitPoints));
@@ -376,3 +375,10 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Combat);
+
+// TODO:
+// - Values changed based on race
+// - Allow user to set "rules" for values. e.g. Always add +2, maybe its from an item
+// - Tool tip for hit points buttons
+// - Add button for adding to total hit points
+// - Validate Hit Dice

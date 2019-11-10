@@ -6,21 +6,45 @@ import {
   editHitPoints,
   editInitiativeBonus,
   editInspiration,
-  editProficiencyBonus,
   editPassivePerception,
+  editProficiencyBonus,
   editSpeed,
   editTempHitPoints,
 } from '../actions/CombatActions';
+import { ABILITY_NAMES } from '../constants/Abilities';
+import calculateArmourClass from '../functions/calculateArmourClass';
+import calculateHitPoints from '../functions/calculateHitPoints';
+import calculatePassivePerception from '../functions/calculatePassivePerception';
+import calculateProficiencyBonus from '../functions/calculateProficiencyBonus';
+import { defaultState as abilityDefaultState } from './AbilityReducer';
+import { defaultState as characterDefaultState } from './CharacterReducer';
 
 // TODO basically check all the default fields
 export const defaultState = {
   inspiration: false,
-  armourClass: 0, // TODO: Get from default dexterity
-  passivePerception: 0, // TODO: Get from default wisdom
-  speed: 10, // TODO: Check if default speed is 10
-  hitPoints: 0,
+
+  // 13 + dex mod // TODO add armour
+  armourClass: calculateArmourClass(
+    abilityDefaultState[ABILITY_NAMES['dex'].toLowerCase()].modifier
+  ),
+
+  // 10 + proficiency bonus + dex mod
+  passivePerception: calculatePassivePerception(
+    0,
+    abilityDefaultState[ABILITY_NAMES['dex'].toLowerCase()].modifier
+  ),
+
+  // Depends on race + armour, 15 seems to be the lowest
+  speed: 15,
+
+  // const mod + hit dice
+  hitPoints: calculateHitPoints(
+    abilityDefaultState[ABILITY_NAMES['con'].toLowerCase()].modifier,
+    '1d4'
+  ),
+
   initiativeBonus: 0,
-  proficiencyBonus: 0,
+  proficiencyBonus: calculateProficiencyBonus(characterDefaultState['level']),
   hitDice: '1d4',
   tempHitPoints: 0,
 };
