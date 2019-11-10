@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component behaviour calls onChange when any other key is pressed 1`] = `
+<input
+  className="Input undefined"
+  id="test"
+  onChange={[MockFunction]}
+  onKeyDown={[Function]}
+  type="text"
+/>
+`;
+
+exports[`Input component behaviour decreases value by 1 when down is pressed  1`] = `
+<input
+  className="Input undefined"
+  id="test"
+  onKeyDown={[Function]}
+  type="text"
+/>
+`;
+
+exports[`Input component behaviour does nothing with event that has no target 1`] = `
+<input
+  className="Input undefined"
+  id="test"
+  onKeyDown={[Function]}
+  type="text"
+/>
+`;
+
+exports[`Input component behaviour does nothing with event that has no value 1`] = `
+<input
+  className="Input undefined"
+  id="test"
+  onKeyDown={[Function]}
+  type="text"
+/>
+`;
+
+exports[`Input component behaviour does nothing with invalid event 1`] = `
+<input
+  className="Input undefined"
+  id="test"
+  onKeyDown={[Function]}
+  type="text"
+/>
+`;
+
+exports[`Input component behaviour increases value by 1 when up is pressed  1`] = `
+<input
+  className="Input undefined"
+  id="test"
+  onKeyDown={[Function]}
+  type="text"
+/>
+`;
+
+exports[`Input component rendering renders Input 1`] = `
+<input
+  className="Input undefined"
+  id="test"
+  onKeyDown={null}
+/>
+`;
+
+exports[`Input component rendering renders Input as text when number 1`] = `
+<input
+  className="Input undefined"
+  id="test"
+  onKeyDown={[Function]}
+  type="text"
+/>
+`;

@@ -1,9 +1,9 @@
-import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
+import React, { useCallback } from 'react';
 import { connect } from 'react-redux';
+import { defaultState } from '../../reducers/CombatReducer';
 
 import { applyCombat } from '../../thunk/CombatThunk.jsx';
-import { defaultState } from '../../reducers/CombatReducer';
 import Checkbox from '../general/Checkbox.jsx';
 import Input from '../general/Input.jsx';
 
@@ -34,6 +34,9 @@ export const Combat = ({
       },
       [onChange]
     );
+
+  const handleKeyDown = type =>
+    useCallback(num => onChange(type, num), [onChange]);
 
   return (
     <div className="Combat">
@@ -91,8 +94,9 @@ export const Combat = ({
                   <Input
                     id="passivePerception"
                     className="Combat__input--larger"
-                    type="text"
+                    type="number"
                     value={passivePerception}
+                    onKeyDown={handleKeyDown('passivePerception')}
                     onChange={handleChange('passivePerception')}
                   />
                 </div>
@@ -103,8 +107,9 @@ export const Combat = ({
                   <Input
                     id="speed"
                     className="Combat__input--larger"
-                    type="text"
+                    type="number"
                     value={speed}
+                    onKeyDown={handleKeyDown('speed')}
                     onChange={handleChange('speed')}
                   />
                 </div>
@@ -117,8 +122,9 @@ export const Combat = ({
                   <Input
                     id="hitPoints"
                     className="Combat__input--largest"
-                    type="text"
+                    type="number"
                     value={hitPoints}
+                    onKeyDown={handleKeyDown('hitPoints')}
                     onChange={handleChange('hitPoints')}
                   />
                 </div>
@@ -130,8 +136,9 @@ export const Combat = ({
                 <Input
                   id="initiativeBonus"
                   className="Combat__input--larger"
-                  type="text"
+                  type="number"
                   value={initiativeBonus}
+                  onKeyDown={handleKeyDown('initiativeBonus')}
                   onChange={handleChange('initiativeBonus')}
                 />
               </div>
@@ -142,8 +149,9 @@ export const Combat = ({
                   <Input
                     id="proficiencyBonus"
                     className="Combat__input--larger"
-                    type="text"
+                    type="number"
                     value={proficiencyBonus}
+                    onKeyDown={handleKeyDown('proficiencyBonus')}
                     onChange={handleChange('proficiencyBonus')}
                   />
                 </div>
@@ -172,8 +180,9 @@ export const Combat = ({
                   <Input
                     id="tempHitPoints"
                     className="Combat__input--larger"
-                    type="text"
+                    type="number"
                     value={tempHitPoints}
+                    onKeyDown={handleKeyDown('tempHitPoints')}
                     onChange={handleChange('tempHitPoints')}
                   />
                 </div>

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LabelledInput component rendering renders LabelledInput 1`] = `
+<div
+  className="LabelledInput"
+>
+  <label
+    className="LabelledInput__label"
+    htmlFor="test"
+  />
+  <Input
+    className="LabelledInput__undefined"
+    id="test"
+  />
+</div>
+`;
