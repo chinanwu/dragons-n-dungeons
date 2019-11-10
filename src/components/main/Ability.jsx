@@ -60,7 +60,9 @@ export const Ability = ({
             onKeyDown={handleKeyDown}
             onChange={handleChange}
           />
+          <div className="AbilityScore__label">Ability Score</div>
           <div className="AbilityModifier">{modifier}</div>
+          <div className="AbilityModifier__label">Modifier</div>
         </div>
         <div className="Ability--right">
           {ABILITY_SKILLS[name.toLowerCase()].map(skill => (

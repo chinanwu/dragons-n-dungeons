@@ -128,10 +128,17 @@ describe('Ability component', () => {
 
   describe('mapStateToProps', () => {
     it('returned mapped properties', () => {
-      const state = { test: { score: 1, modifier: 2 } };
-      expect(mapStateToProps({ ability: state }, { name: 'Test' })).toEqual({
+      const abilityState = { test: { score: 1, modifier: 2 } };
+      const combatState = { proficiencyBonus: 3 };
+      expect(
+        mapStateToProps(
+          { ability: abilityState, combat: combatState },
+          { name: 'Test' }
+        )
+      ).toEqual({
         score: 1,
         modifier: 2,
+        proficiencyBonus: 3,
       });
     });
   });

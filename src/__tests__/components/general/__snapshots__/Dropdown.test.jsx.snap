@@ -2,11 +2,15 @@
 
 exports[`Dropdown component behaviour toggles theme when dropdown option is chosen 1`] = `
 <div
-  className="Dropdown Dropdown--light"
+  className="test--theme"
   id="test"
 >
+  <label
+    className="test--theme"
+    htmlFor="dropdown__select"
+  />
   <select
-    className="Dropdown__select Dropdown__select--light"
+    className="test--theme"
     id="dropdown__select"
     onChange={[Function]}
   >
@@ -15,14 +19,14 @@ exports[`Dropdown component behaviour toggles theme when dropdown option is chos
       hidden={true}
     />
     <option
-      className="Dropdown__option Dropdown__option--light"
+      className="test--theme"
       id="dropdown__option-0"
       value="zero"
     >
       ZERO
     </option>
     <option
-      className="Dropdown__option Dropdown__option--light"
+      className="test--theme"
       id="dropdown__option-1"
       value="one"
     >
@@ -34,11 +38,12 @@ exports[`Dropdown component behaviour toggles theme when dropdown option is chos
 
 exports[`Dropdown component rendering renders Dropdown 1`] = `
 <div
-  className="Dropdown"
   id="test"
 >
+  <label
+    htmlFor="dropdown__select"
+  />
   <select
-    className="Dropdown__select"
     id="dropdown__select"
     onChange={[Function]}
   >
@@ -52,11 +57,15 @@ exports[`Dropdown component rendering renders Dropdown 1`] = `
 
 exports[`Dropdown component rendering renders Dropdown when passed options and theme 1`] = `
 <div
-  className="Dropdown Dropdown--dark"
+  className="test--theme"
   id="test"
 >
+  <label
+    className="test--theme"
+    htmlFor="dropdown__select"
+  />
   <select
-    className="Dropdown__select Dropdown__select--dark"
+    className="test--theme"
     id="dropdown__select"
     onChange={[Function]}
   >
@@ -65,21 +74,21 @@ exports[`Dropdown component rendering renders Dropdown when passed options and t
       hidden={true}
     />
     <option
-      className="Dropdown__option Dropdown__option--dark"
+      className="test--theme"
       id="dropdown__option-0"
       value="light"
     >
       light
     </option>
     <option
-      className="Dropdown__option Dropdown__option--dark"
+      className="test--theme"
       id="dropdown__option-1"
       value="dark"
     >
       dark
     </option>
     <option
-      className="Dropdown__option Dropdown__option--dark"
+      className="test--theme"
       id="dropdown__option-2"
       value="halloween"
     >

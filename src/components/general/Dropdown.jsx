@@ -1,5 +1,5 @@
-import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
+import React, { useCallback } from 'react';
 import { connect } from 'react-redux';
 
 import getThemeClassName from '../../functions/getThemeClassName';
@@ -17,6 +17,12 @@ export const Dropdown = ({ id, name, options, theme, onChange }) => {
 
   return (
     <div id={id} className={getThemeClassName('Dropdown', theme)}>
+      <label
+        className={getThemeClassName('Dropdown__label', theme)}
+        htmlFor="dropdown__select"
+      >
+        {name}
+      </label>
       <select
         id="dropdown__select"
         className={getThemeClassName('Dropdown__select', theme)}

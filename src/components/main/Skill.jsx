@@ -20,9 +20,16 @@ export const Skill = ({ skill, modifier, proficiencyBonus }) => {
 
   return (
     <div className="Skill">
-      <Checkbox checked={isProficient} onChange={handleChange} />
+      <Checkbox
+        id="skillCheckbox"
+        checked={isProficient}
+        onChange={handleChange}
+        ariaLabelledBy="skillName"
+      />
       <div className="Skill__modifier">{calculateModifier()}</div>
-      <div className="Skill__name">{skill}</div>
+      <div id="skillName" className="Skill__name">
+        {skill}
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
-import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
+import React, { useCallback } from 'react';
 
 import { downArrow, upArrow } from '../../constants/Keycodes';
 import dispatchIfInt from '../../functions/dispatchIfInt';
@@ -12,6 +12,8 @@ export const Input = ({
   className,
   type,
   defaultInput,
+  ariaChecked,
+  ariaLabelledBy,
   onChange,
   onKeyDown,
   ...props
@@ -48,6 +50,8 @@ export const Input = ({
       id={id}
       className={'Input ' + className}
       type={type === 'text' || type === 'number' ? 'text' : type}
+      aria-checked={ariaChecked}
+      aria-labelledby={ariaLabelledBy}
       onChange={onChange}
       onKeyDown={type === 'number' ? handleKeyDown : null}
       {...props}
@@ -60,6 +64,8 @@ Input.propTypes = {
   className: PropTypes.string,
   type: PropTypes.string,
   defaultInput: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  ariaChecked: PropTypes.bool,
+  ariaLabelledBy: PropTypes.string,
   onChange: PropTypes.func,
   onKeyDown: PropTypes.func,
 };

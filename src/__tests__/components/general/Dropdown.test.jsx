@@ -1,13 +1,10 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import {
-  Dropdown,
-  mapStateToProps,
-} from '../../../components/general/Dropdown.jsx';
+import { Dropdown, mapStateToProps } from '../../../components/general/Dropdown.jsx';
+import getThemeClassName from '../../../functions/getThemeClassName';
 
 jest.unmock('../../../components/general/Dropdown.jsx');
-jest.unmock('../../../functions/getThemeClassName');
 
 describe('Dropdown component', () => {
   describe('rendering', () => {
@@ -17,6 +14,7 @@ describe('Dropdown component', () => {
     });
 
     it('renders Dropdown when passed options and theme', () => {
+      getThemeClassName.mockReturnValue('test--theme');
       const wrapper = shallow(
         <Dropdown
           id="test"
@@ -30,6 +28,7 @@ describe('Dropdown component', () => {
 
   describe('behaviour', () => {
     it('toggles theme when dropdown option is chosen', () => {
+      getThemeClassName.mockReturnValue('test--theme');
       const onChange = jest.fn();
       const event = { target: { value: 'one' } };
 

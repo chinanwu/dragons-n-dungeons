@@ -1,4 +1,5 @@
 @import '../styling/colours.less';
+@import '../styling/fonts.less';
 
 select {
   -moz-appearance: none;
@@ -7,13 +8,26 @@ select {
 }
 
 .Dropdown {
-  padding-top: 20px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.Dropdown__label {
+  text-align: center;
+  font-size: @font-12;
+}
+
+.Dropdown__label--light {
+  color: @dropdown-button-font-colour;
+}
+
+.Dropdown__label--dark {
+  color: @dropdown-button-font-colour-dark;
 }
 
 .Dropdown__select {
   padding: 5px 3px 5px 3px;
-  font-size: 14px;
+  font-size: @font-14;
   border: none;
   cursor: pointer;
   box-shadow: @box-shadow-01;
@@ -56,7 +70,7 @@ select {
   border: none;
   background-color: white;
   cursor: pointer;
-  font-size: 14px;
+  font-size: @font-14;
 }
 
 .Dropdown__option--light {
