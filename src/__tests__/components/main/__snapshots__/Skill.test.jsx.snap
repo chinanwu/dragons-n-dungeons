@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skill component behaviour adds proficiency bonus when proficient 1`] = `
+<div
+  className="Skill"
+>
+  <Checkbox
+    ariaLabelledBy="skillName"
+    checked={true}
+    id="skillCheckbox"
+    onChange={[Function]}
+  />
+  <div
+    className="Skill__modifier"
+  >
+    NaN
+  </div>
+  <div
+    className="Skill__name"
+    id="skillName"
+  />
+</div>
+`;
+
+exports[`Skill component behaviour sets proficiency when checked 1`] = `
+<div
+  className="Skill"
+>
+  <Checkbox
+    ariaLabelledBy="skillName"
+    checked={false}
+    id="skillCheckbox"
+    onChange={[Function]}
+  />
+  <div
+    className="Skill__modifier"
+  />
+  <div
+    className="Skill__name"
+    id="skillName"
+  />
+</div>
+`;
+
+exports[`Skill component rendering renders Skill 1`] = `
+<div
+  className="Skill"
+>
+  <Checkbox
+    ariaLabelledBy="skillName"
+    checked={false}
+    id="skillCheckbox"
+    onChange={[Function]}
+  />
+  <div
+    className="Skill__modifier"
+  />
+  <div
+    className="Skill__name"
+    id="skillName"
+  />
+</div>
+`;

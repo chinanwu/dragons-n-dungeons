@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox component behaviour becomes checked when clicked 1`] = `
+<Input
+  ariaChecked={false}
+  checked={false}
+  className="Checkbox"
+  id="test"
+  name={null}
+  onChange={[Function]}
+  role="checkbox"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox component behaviour calls onChange when clicked and passed in 1`] = `
+<Input
+  ariaChecked={false}
+  checked={false}
+  className="Checkbox"
+  id="test"
+  name={null}
+  onChange={[Function]}
+  role="checkbox"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox component rendering renders Checkbox 1`] = `
+<Input
+  ariaChecked={false}
+  checked={false}
+  className="Checkbox"
+  id="test"
+  name={null}
+  onChange={[Function]}
+  role="checkbox"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox component rendering renders Checkbox with props 1`] = `
+<Input
+  ariaChecked={true}
+  checked={true}
+  className="Checkbox"
+  id="test"
+  name="test"
+  onChange={[Function]}
+  role="checkbox"
+  type="checkbox"
+/>
+`;
