@@ -21,7 +21,7 @@ export const Skill = ({ skill, modifier, proficiencyBonus }) => {
   return (
     <div className="Skill">
       <Checkbox
-        id="skillCheckbox"
+        id={skill.toLowerCase() + 'Checkbox'}
         checked={isProficient}
         onChange={handleChange}
         ariaLabelledBy="skillName"

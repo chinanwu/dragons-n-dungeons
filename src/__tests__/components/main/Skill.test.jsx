@@ -8,7 +8,7 @@ jest.unmock('../../../components/main/Skill.jsx');
 describe('Skill component', () => {
   describe('rendering', () => {
     it('renders Skill', () => {
-      const wrapper = shallow(<Skill />);
+      const wrapper = shallow(<Skill skill={'test'} />);
       expect(wrapper.getElement()).toMatchSnapshot();
     });
   });
@@ -16,7 +16,7 @@ describe('Skill component', () => {
   describe('behaviour', () => {
     it('adds proficiency bonus when proficient', () => {
       useState.mockReturnValue([true]);
-      const wrapper = shallow(<Skill />);
+      const wrapper = shallow(<Skill skill={'test'} />);
       expect(wrapper.getElement()).toMatchSnapshot();
     });
 
@@ -24,9 +24,9 @@ describe('Skill component', () => {
       const setIsProficient = jest.fn();
       useState.mockReturnValue([false, setIsProficient]);
       const event = true;
-      const wrapper = shallow(<Skill />);
+      const wrapper = shallow(<Skill skill={'test'} />);
       expect(wrapper.getElement()).toMatchSnapshot();
-      wrapper.find('#skillCheckbox').simulate('change', event);
+      wrapper.find('#testCheckbox').simulate('change', event);
       expect(setIsProficient.mock.calls).toEqual([[true]]);
     });
   });
