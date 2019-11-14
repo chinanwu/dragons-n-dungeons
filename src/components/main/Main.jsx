@@ -2,8 +2,6 @@ import React from 'react';
 import { ABILITY_NAMES } from '../../constants/Abilities';
 
 import Ability from './Ability.jsx';
-import Character from './Character.jsx';
-import Combat from './Combat.jsx';
 
 import './Main.less';
 
@@ -24,10 +22,7 @@ export const Main = () => {
           name={ABILITY_NAMES['dex']}
         />
       </div>
-      <div className="Main__details">
-        <Character />
-        <Combat />
-      </div>
+
       <div className="Main__abilities">
         <Ability
           id={ABILITY_NAMES['wis'].toLowerCase()}
