@@ -1,0 +1,425 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ability component behaviour changes null input to default score 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="Ability__name"
+  >
+    Strength
+  </div>
+  <div
+    className="Ability__content"
+  >
+    <div
+      className="Ability__score"
+    >
+      <div
+        className="Ability__scoreLabel"
+        id="abilityScoreLabel"
+      >
+        Ability Score
+      </div>
+      <Input
+        ariaLabelledBy="abilityScoreLabel"
+        className="AbilityScore"
+        defaultInput={0}
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <div
+        className="Ability__modifierLabel"
+      >
+        Modifier
+      </div>
+      <div
+        className="Ability__modifier"
+      />
+    </div>
+    <div>
+      <Skill
+        skill="Saving Throws"
+      />
+      <Skill
+        skill="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour changes out of bounds input to max or min 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="Ability__name"
+  >
+    Strength
+  </div>
+  <div
+    className="Ability__content"
+  >
+    <div
+      className="Ability__score"
+    >
+      <div
+        className="Ability__scoreLabel"
+        id="abilityScoreLabel"
+      >
+        Ability Score
+      </div>
+      <Input
+        ariaLabelledBy="abilityScoreLabel"
+        className="AbilityScore"
+        defaultInput={0}
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <div
+        className="Ability__modifierLabel"
+      >
+        Modifier
+      </div>
+      <div
+        className="Ability__modifier"
+      />
+    </div>
+    <div>
+      <Skill
+        skill="Saving Throws"
+      />
+      <Skill
+        skill="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour changes value to be within boundaries when up arrow is pressed 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="Ability__name"
+  >
+    Strength
+  </div>
+  <div
+    className="Ability__content"
+  >
+    <div
+      className="Ability__score"
+    >
+      <div
+        className="Ability__scoreLabel"
+        id="abilityScoreLabel"
+      >
+        Ability Score
+      </div>
+      <Input
+        ariaLabelledBy="abilityScoreLabel"
+        className="AbilityScore"
+        defaultInput={0}
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <div
+        className="Ability__modifierLabel"
+      >
+        Modifier
+      </div>
+      <div
+        className="Ability__modifier"
+      />
+    </div>
+    <div>
+      <Skill
+        skill="Saving Throws"
+      />
+      <Skill
+        skill="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour changes value when up arrow is pressed 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="Ability__name"
+  >
+    Strength
+  </div>
+  <div
+    className="Ability__content"
+  >
+    <div
+      className="Ability__score"
+    >
+      <div
+        className="Ability__scoreLabel"
+        id="abilityScoreLabel"
+      >
+        Ability Score
+      </div>
+      <Input
+        ariaLabelledBy="abilityScoreLabel"
+        className="AbilityScore"
+        defaultInput={0}
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <div
+        className="Ability__modifierLabel"
+      >
+        Modifier
+      </div>
+      <div
+        className="Ability__modifier"
+      />
+    </div>
+    <div>
+      <Skill
+        skill="Saving Throws"
+      />
+      <Skill
+        skill="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour does nothing  if invalid input 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="Ability__name"
+  >
+    Strength
+  </div>
+  <div
+    className="Ability__content"
+  >
+    <div
+      className="Ability__score"
+    >
+      <div
+        className="Ability__scoreLabel"
+        id="abilityScoreLabel"
+      >
+        Ability Score
+      </div>
+      <Input
+        ariaLabelledBy="abilityScoreLabel"
+        className="AbilityScore"
+        defaultInput={0}
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <div
+        className="Ability__modifierLabel"
+      >
+        Modifier
+      </div>
+      <div
+        className="Ability__modifier"
+      />
+    </div>
+    <div>
+      <Skill
+        skill="Saving Throws"
+      />
+      <Skill
+        skill="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour does nothing if event is null 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="Ability__name"
+  >
+    Strength
+  </div>
+  <div
+    className="Ability__content"
+  >
+    <div
+      className="Ability__score"
+    >
+      <div
+        className="Ability__scoreLabel"
+        id="abilityScoreLabel"
+      >
+        Ability Score
+      </div>
+      <Input
+        ariaLabelledBy="abilityScoreLabel"
+        className="AbilityScore"
+        defaultInput={0}
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <div
+        className="Ability__modifierLabel"
+      >
+        Modifier
+      </div>
+      <div
+        className="Ability__modifier"
+      />
+    </div>
+    <div>
+      <Skill
+        skill="Saving Throws"
+      />
+      <Skill
+        skill="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component behaviour saves changed input 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="Ability__name"
+  >
+    Strength
+  </div>
+  <div
+    className="Ability__content"
+  >
+    <div
+      className="Ability__score"
+    >
+      <div
+        className="Ability__scoreLabel"
+        id="abilityScoreLabel"
+      >
+        Ability Score
+      </div>
+      <Input
+        ariaLabelledBy="abilityScoreLabel"
+        className="AbilityScore"
+        defaultInput={0}
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <div
+        className="Ability__modifierLabel"
+      >
+        Modifier
+      </div>
+      <div
+        className="Ability__modifier"
+      />
+    </div>
+    <div>
+      <Skill
+        skill="Saving Throws"
+      />
+      <Skill
+        skill="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ability component rendering renders Ability 1`] = `
+<div
+  className="Ability"
+  id="test"
+>
+  <div
+    className="Ability__name"
+  >
+    Strength
+  </div>
+  <div
+    className="Ability__content"
+  >
+    <div
+      className="Ability__score"
+    >
+      <div
+        className="Ability__scoreLabel"
+        id="abilityScoreLabel"
+      >
+        Ability Score
+      </div>
+      <Input
+        ariaLabelledBy="abilityScoreLabel"
+        className="AbilityScore"
+        defaultInput={0}
+        id="abilityScore"
+        maxLength={2}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <div
+        className="Ability__modifierLabel"
+      >
+        Modifier
+      </div>
+      <div
+        className="Ability__modifier"
+      />
+    </div>
+    <div>
+      <Skill
+        skill="Saving Throws"
+      />
+      <Skill
+        skill="Athletics"
+      />
+    </div>
+  </div>
+</div>
+`;

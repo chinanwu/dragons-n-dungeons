@@ -13,11 +13,12 @@
 - Colour schemes - Design
     - Need to come up with colour scheme for light and dark themes. [Check this](https://uxdesign.cc/the-light-and-the-dark-side-creating-a-ui-colour-system-in-3-steps-41818c5bdb60)
 - Cross-browser CSS 
+
+- Making tickets for issues instead of it just living in README
     
 ### Known issues
 - When open a tab panel, top of tab panel will snap to top of page, shouldn't scroll down for you.
-- Logo isn't transparent
-- Ability score numbers get cut off - spacing, alignment is off
+    - Update: Nov 14 - Need to confirm still an issue
 - Tabs keydown implementation - How to fix coverage issue?
 - Tabbing on tab headers goes to theme button instead of next tab header.
 - AC cannot be cleared to be 0
