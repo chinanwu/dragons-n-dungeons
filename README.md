@@ -5,13 +5,14 @@
     e.g. 1 -> tab 0 
     e.g. 2 -> tab 1
 - ARIA everywhere - Accessibility
-- Mobile - Accessibility(?)
+- Mobile/Media Queries
 
 - Pull onKeyDown out of TabButton, into TabList - Tech debt
 - Set up CI, code cov - Tech
 
 - Colour schemes - Design
     - Need to come up with colour scheme for light and dark themes. [Check this](https://uxdesign.cc/the-light-and-the-dark-side-creating-a-ui-colour-system-in-3-steps-41818c5bdb60)
+- Cross-browser CSS 
     
 ### Known issues
 - When open a tab panel, top of tab panel will snap to top of page, shouldn't scroll down for you.
@@ -20,12 +21,7 @@
 - Tabs keydown implementation - How to fix coverage issue?
 - Tabbing on tab headers goes to theme button instead of next tab header.
 - AC cannot be cleared to be 0
-- Height of children inside tab is more than 100%
-
-### Todo
-(slightly differs from upcoming features, much smaller tasks, really)
-- Use abilities to calculate other relevant factors.
-- Style checkbox better
+- Checkboxes are ugly -- Style them better
 
 Some readings that helped me along the way:
 - [Testing with Jest and Redux](https://hackernoon.com/unit-testing-redux-connected-components-692fa3c4441c)

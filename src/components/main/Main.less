@@ -13,3 +13,19 @@
   display: grid;
   grid-template-rows: 1fr 2fr;
 }
+
+@media all and (max-width: 1050px) {
+  .Main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Main__abilities {
+    display: flex;
+    order: -1;
+  }
+
+  .Main__details {
+    display: flex;
+  }
+}
