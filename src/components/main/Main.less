@@ -1,11 +1,15 @@
 .Main {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100%;
 }
 
-.Main--side {
-  width: 30%;
+.Main__abilities {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
-.Main--mid {
-  width: 44%;
+.Main__details {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
 }

@@ -19,6 +19,8 @@
 - Ability score numbers get cut off - spacing, alignment is off
 - Tabs keydown implementation - How to fix coverage issue?
 - Tabbing on tab headers goes to theme button instead of next tab header.
+- AC cannot be cleared to be 0
+- Height of children inside tab is more than 100%
 
 ### Todo
 (slightly differs from upcoming features, much smaller tasks, really)

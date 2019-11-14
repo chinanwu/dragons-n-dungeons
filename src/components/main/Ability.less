@@ -2,28 +2,34 @@
 @import '../styling/fonts.less';
 
 .Ability {
-  height: 170px;
   border: 1px solid black;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 12px;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
 }
 
-.AbilityName {
-  text-align: center;
-  margin-top: 6px;
+.Ability__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: @font-24;
 }
 
-.AbilityContent {
-  display: flex;
+.Ability__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   margin-top: 8px;
 }
 
-.Ability--left {
-  display: block;
-  width: 30%;
+.Ability__score {
   text-align: center;
+}
+
+.Ability__scoreLabel {
+  font-size: @font-10;
+  color: @input-label-colour;
 }
 
 .AbilityScore {
@@ -31,20 +37,22 @@
   text-align: center;
 }
 
-.AbilityScore__label {
-  font-size: @font-10;
-  color: @input-label-colour;
-}
-
-.AbilityModifier {
+.Ability__modifier {
   font-size: @font-21;
 }
 
-.AbilityModifier__label {
+.Ability__modifierLabel {
   color: @input-label-colour;
   font-size: @font-10;
 }
 
-.Ability--right {
-  width: 70%;
+@media all and (max-width: 1050px) {
+  .Ability__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Ability__score {
+    margin-bottom: 6px;
+  }
 }

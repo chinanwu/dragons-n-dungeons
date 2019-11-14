@@ -8,8 +8,8 @@ import validateEvent from '../../functions/validateEvent';
 import { defaultScore } from '../../reducers/AbilityReducer';
 import { applyAbilityProxy } from '../../thunk/AbilityThunk.jsx';
 import Input from '../general/Input.jsx';
-
 import './Ability.less';
+
 import { Skill } from './Skill.jsx';
 
 export const Ability = ({
@@ -47,10 +47,10 @@ export const Ability = ({
 
   return (
     <div id={id} className="Ability">
-      <div className="AbilityName">{name}</div>
-      <div className="AbilityContent">
-        <div className="Ability--left">
-          <div id="abilityScoreLabel" className="AbilityScore__label">
+      <div className="Ability__name">{name}</div>
+      <div className="Ability__content">
+        <div className="Ability__score">
+          <div id="abilityScoreLabel" className="Ability__scoreLabel">
             Ability Score
           </div>
           <Input
@@ -64,10 +64,10 @@ export const Ability = ({
             onKeyDown={handleKeyDown}
             onChange={handleChange}
           />
-          <div className="AbilityModifier__label">Modifier</div>
-          <div className="AbilityModifier">{modifier}</div>
+          <div className="Ability__modifierLabel">Modifier</div>
+          <div className="Ability__modifier">{modifier}</div>
         </div>
-        <div className="Ability--right">
+        <div>
           {ABILITY_SKILLS[name.toLowerCase()].map(skill => (
             <Skill
               key={skill}

@@ -1,88 +1,42 @@
 @import '../styling/fonts.less';
 
 .Combat {
-  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
   border: 1px solid black;
 }
 
-.Combat--table {
-  border-collapse: collapse;
-  width: 100%;
+.Combat__top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
   margin-top: 20px;
-}
-
-.Combat--tr {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
   margin-left: 40px;
   margin-right: 40px;
 }
 
-.Combat--box {
-  border: 1px solid black;
+.Combat__middle {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin-top: 12px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-.Combat--td-large {
-  width: 35%;
+.Combat__middleSide {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
-.Combat--td-small {
-  width: 20%;
-}
-
-.Combat--td-larger {
-  width: 50%;
-}
-
-.Combat--td-largest {
-  width: 75%;
-}
-
-.Combat--col {
-  display: flex;
-  flex-direction: column;
-}
-
-.Combat--top-large {
-  width: 100%;
-  height: 100%;
-}
-
-.Combat__deathSaves {
-  display: flex;
-  justify-content: space-between;
-}
-
-.Combat__deathSavesLabels {
-  margin-left: 6px;
-}
-
-.Combat__deathSavesCheckboxes {
-  margin-right: 6px;
+.Combat__bottom {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 12px 40px 20px;
 }
 
 .Combat__label {
   text-align: center;
-}
-
-.Combat--row {
-  display: flex;
-}
-
-.Combat--mid-space {
-  margin-bottom: 6px;
-}
-
-.Combat__inspiration {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Combat__inspirationCheckbox {
-  height: 100%;
-  top: 50%;
+  margin-top: 6px;
 }
 
 .Combat__input--larger {
@@ -90,16 +44,64 @@
   font-size: @font-36;
 }
 
+.Combat__input--largest {
+  text-align: center;
+  font-size: @font-72;
+}
+
+.Combat__deathSaves {
+  border: 1px solid black;
+}
+
+.Combat__deathSavesContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.Combat__deathSavesLabels {
+  margin-left: 8px;
+}
+
+.Combat__deathSavesCheckboxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-right: 8px;
+}
+
+.Combat__inspiration {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  border: 1px solid black;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.Combat__inspirationCheckbox {
+  display: flex;
+  justify-content: center;
+}
+
+.Combat__armourClass {
+  border: 1px solid black;
+}
+
+.Combat__passivePerception {
+  border: 1px solid black;
+  margin-bottom: 12px;
+}
+
 .Combat__speed {
-  top: 50%;
-  height: 100%;
+  border: 1px solid black;
 }
 
 .Combat__hitPoints {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  border: 1px solid black;
+  margin-left: 12px;
+  margin-right: 12px;
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
 }
 
 .Combat__hitPointsHeader {
@@ -108,7 +110,6 @@
   align-items: center;
   margin-left: 12px;
   margin-right: 12px;
-  margin-top: 6px;
 }
 
 .Combat__hitPointsBtn {
@@ -119,21 +120,39 @@
   -ms-user-select: none; /* IE10+ */
 }
 
+.Combat__hitPointsInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .Combat__hitPointsTotal {
   display: flex;
   font-size: @font-18;
-  width: 90%;
-  align-self: center;
   margin-bottom: 6px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
-.Combat__hitPointsTotal input {
-  margin-left: 6px;
+.Combat__hitPointsTotalInput {
+  margin-left: 3px;
   font-size: @font-18;
-  overflow: hidden;
 }
 
-.Combat__input--largest {
-  text-align: center;
-  font-size: @font-72;
+.Combat__initiativeBonus {
+  border: 1px solid black;
+  margin-bottom: 12px;
+}
+
+.Combat__proficiencyBonus {
+  border: 1px solid black;
+}
+
+.Combat__hitDice {
+  border: 1px solid black;
+  margin-right: 12px;
+}
+
+.Combat__tempHitPoints {
+  border: 1px solid black;
 }
