@@ -34,7 +34,7 @@ InputBox.propTypes = {
   id: PropTypes.string.isRequired,
   className: PropTypes.string,
   label: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   type: PropTypes.string,
   onChange: PropTypes.func,
   onKeyDown: PropTypes.func,
