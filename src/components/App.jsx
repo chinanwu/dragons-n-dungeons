@@ -1,9 +1,10 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { ABILITY_NAMES } from '../constants/Abilities.js';
-import { store } from '../store.js';
 
+import { ABILITY_NAMES } from '../constants/Abilities';
+import { store } from '../store';
 import './App.less';
+
 import Carousel from './carousel/Carousel.jsx';
 import CarouselItem from './carousel/CarouselItem.jsx';
 import Dropdown from './general/Dropdown.jsx';
@@ -11,7 +12,6 @@ import Logo from './general/Logo.jsx';
 import Ability from './main/Ability.jsx';
 import Main from './main/Main.jsx';
 import Tab from './tabs/Tab.jsx';
-
 import TabFooter from './tabs/TabFooter.jsx';
 import TabHeader from './tabs/TabHeader.jsx';
 import Tabs from './tabs/Tabs.jsx';

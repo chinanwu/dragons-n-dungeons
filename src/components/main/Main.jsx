@@ -3,8 +3,8 @@ import React from 'react';
 import { ABILITY_NAMES } from '../../constants/Abilities';
 
 import Ability from './Ability.jsx';
-import { Character } from './Character.jsx';
-import { Combat } from './Combat.jsx';
+import Character from './Character.jsx';
+import Combat from './Combat.jsx';
 import './Main.less';
 
 export const Main = () => {
