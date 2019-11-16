@@ -7,10 +7,6 @@
   flex-direction: column;
 }
 
-.LabelledInput {
-  font-size: @font-24;
-}
-
 #characterLevel {
   font-size: @font-24;
 }
@@ -38,4 +34,22 @@
 .Character--right {
   display: flex;
   flex-direction: column;
+}
+
+@media all and (max-width: 1175px) {
+  .Character {
+  }
+
+  .Character--bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #characterLevel {
+    font-size: @font-18;
+  }
+
+  #characterExperience {
+    font-size: @font-18;
+  }
 }

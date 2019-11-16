@@ -50,24 +50,29 @@ export const Ability = ({
       <div className="Ability__name">{name}</div>
       <div className="Ability__content">
         <div className="Ability__score">
-          <div id="abilityScoreLabel" className="Ability__scoreLabel">
-            Ability Score
+          <div>
+            <div id="abilityScoreLabel" className="Ability__scoreLabel">
+              Ability Score
+            </div>
+
+            <Input
+              id="abilityScore"
+              className="AbilityScore"
+              type="number"
+              maxLength={2}
+              value={score}
+              defaultInput={defaultScore}
+              ariaLabelledBy="abilityScoreLabel"
+              onKeyDown={handleKeyDown}
+              onChange={handleChange}
+            />
           </div>
-          <Input
-            id="abilityScore"
-            className="AbilityScore"
-            type="number"
-            maxLength={2}
-            value={score}
-            defaultInput={defaultScore}
-            ariaLabelledBy="abilityScoreLabel"
-            onKeyDown={handleKeyDown}
-            onChange={handleChange}
-          />
-          <div className="Ability__modifierLabel">Modifier</div>
-          <div className="Ability__modifier">{modifier}</div>
+          <div>
+            <div className="Ability__modifierLabel">Modifier</div>
+            <div className="Ability__modifier">{modifier}</div>
+          </div>
         </div>
-        <div>
+        <div className="Ability__skills">
           {ABILITY_SKILLS[name.toLowerCase()].map(skill => (
             <Skill
               key={skill}
