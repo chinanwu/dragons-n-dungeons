@@ -1,3 +1,4 @@
+@import '../styling/colours.less';
 @import '../styling/fonts.less';
 
 .Combat {
@@ -124,18 +125,29 @@
 }
 
 .Combat__hitPointsTotal {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 9fr 90fr 1fr;
   align-items: center;
   font-size: @font-18;
   margin-bottom: 6px;
   margin-left: 12px;
-  margin-right: 12px;
+  margin-right: 20px;
 }
 
 .Combat__hitPointsTotalInput {
   margin-left: 3px;
   font-size: @font-18;
+}
+
+.Combat__hitPointsTotalEditBtn {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: inherit;
+}
+
+.Combat__hitPointsTotalEditBtnSvg {
+  color: @main-5;
 }
 
 .Combat__initiativeBonus {

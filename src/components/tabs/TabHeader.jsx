@@ -1,7 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-// TODO: still working on the name
 export const TabHeader = ({ children }) => {
   return children;
 };
