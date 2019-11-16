@@ -24,7 +24,7 @@ export const Main = () => {
           name={ABILITY_NAMES['dex']}
         />
       </div>
-      <div>
+      <div className="Main__details">
         <Character />
         <Combat />
       </div>

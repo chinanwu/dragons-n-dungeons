@@ -9,8 +9,9 @@ import { defaultState } from '../../reducers/CombatReducer';
 import { applyCombat } from '../../thunk/CombatThunk.jsx';
 import Checkbox from '../general/Checkbox.jsx';
 import Input from '../general/Input.jsx';
-
 import './Combat.less';
+
+import InputBox from './InputBox.jsx';
 
 export const Combat = ({
   inspiration,
@@ -145,15 +146,12 @@ export const Combat = ({
           </div>
         </div>
         <div className="Combat__armourClass">
-          <div id="armourClassLabel" className="Combat__label">
-            Armour Class
-          </div>
-          <Input
+          <InputBox
             id="armourClass"
             className="Combat__input--larger"
-            type="text"
+            label="Armour Class"
             value={armourClass}
-            ariaLabelledBy="armourClassLabel"
+            type="text"
             onChange={handleChange('armourClass')}
           />
         </div>
@@ -161,36 +159,26 @@ export const Combat = ({
       <div className="Combat__middle">
         <div className="Combat__middleSide">
           <div className="Combat__passivePerception">
-            <div id="passivePerceptionLabel" className="Combat__label">
-              Passive Perception
-            </div>
-            <div className="Combat__input">
-              <Input
-                id="passivePerception"
-                className="Combat__input--larger"
-                type="number"
-                value={passivePerception}
-                ariaLabelledBy="passivePerceptionLabel"
-                onKeyDown={handleKeyDown('passivePerception')}
-                onChange={handleChange('passivePerception')}
-              />
-            </div>
+            <InputBox
+              id="passivePerception"
+              className="Combat__input--larger"
+              label="Passive Perception"
+              value={passivePerception}
+              type="number"
+              onKeyDown={handleKeyDown('passivePerception')}
+              onChange={handleChange('passivePerception')}
+            />
           </div>
           <div className="Combat__speed">
-            <div id="speedLabel" className="Combat__label">
-              Speed
-            </div>
-            <div className="Combat__input">
-              <Input
-                id="speed"
-                className="Combat__input--larger"
-                type="number"
-                value={speed}
-                ariaLabelledBy="speedLabel"
-                onKeyDown={handleKeyDown('speed')}
-                onChange={handleChange('speed')}
-              />
-            </div>
+            <InputBox
+              id="speed"
+              className="Combat__input--larger"
+              label="Speed"
+              value={speed}
+              type="number"
+              onKeyDown={handleKeyDown('speed')}
+              onChange={handleChange('speed')}
+            />
           </div>
         </div>
         <div className="Combat__hitPoints">
@@ -247,68 +235,50 @@ export const Combat = ({
         </div>
         <div className="Combat__middleSide">
           <div className="Combat__initiativeBonus">
-            <div id="initiativeBonusLabel" className="Combat__label">
-              Initiative Bonus
-            </div>
-            <Input
+            <InputBox
               id="initiativeBonus"
               className="Combat__input--larger"
-              type="number"
+              label="Initiative Bonus"
               value={initiativeBonus}
-              ariaLabelledBy="initiativeBonusLabel"
+              type="number"
               onKeyDown={handleKeyDown('initiativeBonus')}
               onChange={handleChange('initiativeBonus')}
             />
           </div>
           <div className="Combat__proficiencyBonus">
-            <div id="proficiencyBonusLabel" className="Combat__label">
-              Proficiency Bonus
-            </div>
-            <div className="Combat__input">
-              <Input
-                id="proficiencyBonus"
-                className="Combat__input--larger"
-                type="number"
-                value={proficiencyBonus}
-                ariaLabelledBy="proficiencyBonusLabel"
-                onKeyDown={handleKeyDown('proficiencyBonus')}
-                onChange={handleChange('proficiencyBonus')}
-              />
-            </div>
+            <InputBox
+              id="proficiencyBonus"
+              className="Combat__input--larger"
+              label="Proficiency Bonus"
+              value={proficiencyBonus}
+              type="number"
+              onKeyDown={handleKeyDown('proficiencyBonus')}
+              onChange={handleChange('proficiencyBonus')}
+            />
           </div>
         </div>
       </div>
       <div className="Combat__bottom">
         <div className="Combat__hitDice">
-          <div id="hitDiceLabel" className="Combat__label">
-            Hit Dice
-          </div>
-          <div className="Combat__input">
-            <Input
-              id="hitDice"
-              className="Combat__input--larger"
-              type="text"
-              value={hitDice}
-              ariaLabelledBy="hitDiceLabel"
-              onChange={handleChange('hitDice')}
-            />
-          </div>
+          <InputBox
+            id="hitDice"
+            className="Combat__input--larger"
+            label="Hit Dice"
+            value={hitDice}
+            type="text"
+            onChange={handleChange('hitDice')}
+          />
         </div>
         <div className="Combat__tempHitPoints">
-          <div id="tempHitPointsLabel" className="Combat__label">
-            Temporary Hit Points
-          </div>
-          <div className="Combat__input">
-            <Input
-              id="tempHitPoints"
-              className="Combat__input--larger"
-              type="number"
-              value={tempHitPoints}
-              ariaLabelledBy="tempHitPointsLabels"
-              onKeyDown={handleKeyDown('tempHitPoints')}
-              onChange={handleChange('tempHitPoints')}
-            />
-          </div>
+          <InputBox
+            id="tempHitPoints"
+            className="Combat__input--larger"
+            label="Temporary Hit Points"
+            value={tempHitPoints}
+            type="number"
+            onKeyDown={handleKeyDown('tempHitPoints')}
+            onChange={handleChange('tempHitPoints')}
+          />
         </div>
       </div>
     </div>
@@ -360,10 +330,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Combat);
-
-// TODO:
-// - Validate Hit Dice
-// - Tool tip for hit points buttons
-// - Add button for adding to total hit points
-// - Values changed based on race
-// - Allow user to set "rules" for values. e.g. Always add +2, maybe its from an item

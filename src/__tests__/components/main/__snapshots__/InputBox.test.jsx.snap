@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputBox component behaviour calls onChange when input text 1`] = `
+<React.Fragment>
+  <div
+    className="InputBox__label"
+    id="testLabel"
+  />
+  <Input
+    ariaLabelledBy="testLabel"
+    id="test"
+    onChange={[MockFunction]}
+  />
+</React.Fragment>
+`;
+
+exports[`InputBox component rendering renders InputBox 1`] = `
+<React.Fragment>
+  <div
+    className="InputBox__label"
+    id="testLabel"
+  />
+  <Input
+    ariaLabelledBy="testLabel"
+    id="test"
+  />
+</React.Fragment>
+`;
