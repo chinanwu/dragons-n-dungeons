@@ -27,7 +27,7 @@ export const Checkbox = ({
   return (
     <Input
       id={id}
-      className={'Checkbox ' + className}
+      className={'Checkbox' + (className ? ' ' + className : '')}
       name={name ? name : null}
       type="checkbox"
       role="checkbox"

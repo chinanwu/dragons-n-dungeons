@@ -5,7 +5,7 @@ exports[`Main component rendering renders Main 1`] = `
   className="Main"
 >
   <div
-    className="Main--side"
+    className="Main__abilities"
   >
     <Memo(Connect(Ability))
       id="strength"
@@ -21,13 +21,13 @@ exports[`Main component rendering renders Main 1`] = `
     />
   </div>
   <div
-    className="Main--mid"
+    className="Main__details"
   >
     <Memo(Connect(Character)) />
     <Memo(Connect(Combat)) />
   </div>
   <div
-    className="Main--side"
+    className="Main__abilities"
   >
     <Memo(Connect(Ability))
       id="wisdom"
