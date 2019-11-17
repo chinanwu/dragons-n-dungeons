@@ -56,14 +56,30 @@
 
 .Combat__deathSavesContent {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'fail  fCheckbox'
+    'success sCheckbox';
   margin-left: 8px;
   margin-right: 8px;
 }
 
-.Combat__deathSavesCheckboxes {
+.Combat__deathSaveFailLabel {
+  grid-area: fail;
+}
+
+.Combat__deathSaveSuccessLabel {
+  grid-area: success;
+}
+
+.Combat__deathSavesFailCheckboxes {
   display: flex;
-  //grid-template-columns: 1fr 1fr 1fr;
+  grid-area: fCheckbox;
+}
+
+.Combat__deathSavesSuccessCheckboxes {
+  display: flex;
+  grid-area: sCheckbox;
 }
 
 .Combat__inspiration {
@@ -188,5 +204,33 @@
   .Combat__bottom {
     margin-left: 20px;
     margin-right: 20px;
+  }
+}
+
+@media all and (max-width: 655px) {
+  .Combat__deathSavesContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Combat__deathSaveFailLabel {
+    order: -1;
+    text-align: center;
+    margin-top: 3px;
+  }
+
+  .Combat__deathSavesFailCheckboxes {
+    order: 0;
+  }
+
+  .Combat__deathSaveSuccessLabel {
+    text-align: center;
+    order: 1;
+  }
+
+  .Combat__deathSavesSuccessCheckboxes {
+    order: 2;
+    margin-top: 3px;
+    margin-bottom: 6px;
   }
 }

@@ -19,52 +19,48 @@ exports[`Combat component rendering renders Combat 1`] = `
         className="Combat__deathSavesContent"
       >
         <div
-          className="Combat__deathSavesLabels"
+          className="Combat__deathSaveFailLabel"
+          id="deathSaveFailLabel"
         >
-          <div
-            id="deathSaveFailLabel"
-          >
-            Fails
-          </div>
-          <div
-            id="deathSaveSuccessLabel"
-          >
-            Successes
-          </div>
+          Fails
         </div>
-        <div>
-          <div
-            className="Combat__deathSavesCheckboxes"
-          >
-            <Checkbox
-              ariaLabelledBy="deathSaveFailLabel"
-              id="deathSaveFail-1"
-            />
-            <Checkbox
-              ariaLabelledBy="deathSaveFailLabel"
-              id="deathSaveFail-2"
-            />
-            <Checkbox
-              ariaLabelledBy="deathSaveFailLabel"
-              id="deathSaveFail-3"
-            />
-          </div>
-          <div
-            className="Combat__deathSavesCheckboxes"
-          >
-            <Checkbox
-              ariaLabelledBy="deathSaveSuccessLabel"
-              id="deathSaveSuccess-1"
-            />
-            <Checkbox
-              ariaLabelledBy="deathSaveSuccessLabel"
-              id="deathSaveSuccess-2"
-            />
-            <Checkbox
-              ariaLabelledBy="deathSaveSuccessLabel"
-              id="deathSaveSuccess-3"
-            />
-          </div>
+        <div
+          className="Combat__deathSaveSuccessLabel"
+          id="deathSaveSuccessLabel"
+        >
+          Successes
+        </div>
+        <div
+          className="Combat__deathSavesFailCheckboxes"
+        >
+          <Checkbox
+            ariaLabelledBy="deathSaveFailLabel"
+            id="deathSaveFail-1"
+          />
+          <Checkbox
+            ariaLabelledBy="deathSaveFailLabel"
+            id="deathSaveFail-2"
+          />
+          <Checkbox
+            ariaLabelledBy="deathSaveFailLabel"
+            id="deathSaveFail-3"
+          />
+        </div>
+        <div
+          className="Combat__deathSavesSuccessCheckboxes"
+        >
+          <Checkbox
+            ariaLabelledBy="deathSaveSuccessLabel"
+            id="deathSaveSuccess-1"
+          />
+          <Checkbox
+            ariaLabelledBy="deathSaveSuccessLabel"
+            id="deathSaveSuccess-2"
+          />
+          <Checkbox
+            ariaLabelledBy="deathSaveSuccessLabel"
+            id="deathSaveSuccess-3"
+          />
         </div>
       </div>
     </div>
