@@ -265,7 +265,18 @@ export const Combat = ({
               </svg>
             </button>
             {showHitPointsTotalModal &&
-              createPortal(<div>test</div>, document.body)}
+              createPortal(
+                <div
+                  className="Combat__hitPointsModal"
+                  style={{
+                    left: document.documentElement.clientWidth / 2 - 150,
+                    top: document.documentElement.clientHeight / 2 - 150,
+                  }}
+                >
+                  test
+                </div>,
+                document.body
+              )}
           </div>
         </div>
         <div className="Combat__middleSide">
