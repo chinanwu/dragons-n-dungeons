@@ -19,15 +19,6 @@ exports[`Input component behaviour decreases value by 1 when down is pressed  1`
 />
 `;
 
-exports[`Input component behaviour does nothing with event that has no target 1`] = `
-<input
-  className="Input undefined"
-  id="test"
-  onKeyDown={[Function]}
-  type="text"
-/>
-`;
-
 exports[`Input component behaviour does nothing with event that has no value 1`] = `
 <input
   className="Input undefined"
