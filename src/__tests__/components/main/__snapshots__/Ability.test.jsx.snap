@@ -167,7 +167,7 @@ exports[`Ability component behaviour changes value to be within boundaries when 
       className="Ability__skills"
     >
       <Skill
-        skill="Saving Throws"
+        skill="Saving Throw"
       />
       <Skill
         skill="Athletics"
