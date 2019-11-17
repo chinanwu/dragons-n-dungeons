@@ -10,6 +10,10 @@
     "format": "prettier --write \"src/**/*.js\"",
     "build": "rm -rf dist && webpack -p"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chinanwu/dragons-n-dungeons"
+  },
   "author": "Chin-An Wu",
   "license": "ISC",
   "dependencies": {
@@ -25,6 +29,7 @@
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "codecov": "^3.6.1",
     "css-loader": "^3.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
