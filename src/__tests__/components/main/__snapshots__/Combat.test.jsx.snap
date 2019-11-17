@@ -4,290 +4,270 @@ exports[`Combat component rendering renders Combat 1`] = `
 <div
   className="Combat"
 >
-  <table
-    className="Combat--table"
+  <div
+    className="Combat__top"
   >
-    <tbody>
-      <tr
-        className="Combat--tr"
+    <div
+      className="Combat__deathSaves"
+    >
+      <div
+        className="Combat__label"
       >
-        <td
-          className="Combat--td-large"
-        >
-          <div
-            className="Combat--box Combat--top-large"
-          >
-            <div
-              className="Combat__label"
-            >
-              Death Saves
-            </div>
-            <div
-              className="Combat__deathSaves"
-            >
-              <div
-                className="Combat--col"
-              >
-                <div>
-                  Fails
-                </div>
-                <div>
-                  Successes
-                </div>
-              </div>
-              <div
-                className="Combat--col"
-              >
-                <div
-                  className="Combat--row"
-                >
-                  <Checkbox />
-                  <Checkbox />
-                  <Checkbox />
-                </div>
-                <div
-                  className="Combat--row"
-                >
-                  <Checkbox />
-                  <Checkbox />
-                  <Checkbox />
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          className="Combat__inspiration"
-        >
-          <div
-            className="Combat--box"
-          >
-            <Checkbox />
-          </div>
-        </td>
-        <td
-          className="Combat--td-large"
-        >
-          <div
-            className="Combat--box Combat--top-large"
-          >
-            <div
-              className="Combat__label"
-            >
-              Armour Class
-            </div>
-            <div
-              className="Combat__input"
-            >
-              <Input
-                className="Combat__input--larger"
-                id="armourClass"
-                onChange={[Function]}
-                type="text"
-              />
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr
-        className="Combat--tr"
+        Death Saves
+      </div>
+      <div
+        className="Combat__deathSavesContent"
       >
-        <td
-          className="Combat--td-small Combat--col"
+        <div
+          className="Combat__deathSavesLabels"
         >
           <div
-            className="Combat--box Combat--mid-space"
+            id="deathSaveFailLabel"
           >
-            <div
-              className="Combat__label"
-            >
-              Passive Perception
-            </div>
-            <div
-              className="Combat__input"
-            >
-              <Input
-                className="Combat__input--larger"
-                id="passivePerception"
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                type="number"
-              />
-            </div>
+            Fails
           </div>
           <div
-            className="Combat--box Combat__speed"
+            id="deathSaveSuccessLabel"
           >
-            <div
-              className="Combat__label"
-            >
-              Speed
-            </div>
-            <div
-              className="Combat__input"
-            >
-              <Input
-                className="Combat__input--larger"
-                id="speed"
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                type="number"
-              />
-            </div>
+            Successes
           </div>
-        </td>
-        <td
-          className="Combat--td-larger"
-        >
+        </div>
+        <div>
           <div
-            className="Combat--box Combat__hitPoints"
+            className="Combat__deathSavesCheckboxes"
           >
-            <div
-              className="Combat__hitPointsHeader"
-            >
-              <div
-                className="Combat__hitPointsBtn"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="button"
-                tabIndex="0"
-                unselectable="on"
-              >
-                +
-              </div>
-              <div
-                className="Combat__label"
-              >
-                Hit Points
-              </div>
-              <div
-                className="Combat__hitPointsBtn"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="button"
-                tabIndex="0"
-                unselectable="on"
-              >
-                -
-              </div>
-            </div>
-            <div
-              className="Combat__input"
-            >
-              <Input
-                className="Combat__input--largest"
-                id="hitPoints"
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                type="number"
-              />
-            </div>
-            <div
-              className="Combat__hitPointsTotal"
-            >
-              Total:
-              <Input
-                id="hitPoints"
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                type="number"
-              />
-            </div>
-          </div>
-        </td>
-        <td
-          className="Combat--td-small"
-        >
-          <div
-            className="Combat--box Combat--mid-space"
-          >
-            <div
-              className="Combat__label"
-            >
-              Initiative Bonus
-            </div>
-            <Input
-              className="Combat__input--larger"
-              id="initiativeBonus"
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              type="number"
+            <Checkbox
+              ariaLabelledBy="deathSaveFailLabel"
+              id="deathSaveFail-1"
+            />
+            <Checkbox
+              ariaLabelledBy="deathSaveFailLabel"
+              id="deathSaveFail-2"
+            />
+            <Checkbox
+              ariaLabelledBy="deathSaveFailLabel"
+              id="deathSaveFail-3"
             />
           </div>
           <div
-            className="Combat--box "
+            className="Combat__deathSavesCheckboxes"
           >
-            <div
-              className="Combat__label"
-            >
-              Proficiency Bonus
-            </div>
-            <div
-              className="Combat__input"
-            >
-              <Input
-                className="Combat__input--larger"
-                id="proficiencyBonus"
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                type="number"
-              />
-            </div>
+            <Checkbox
+              ariaLabelledBy="deathSaveSuccessLabel"
+              id="deathSaveSuccess-1"
+            />
+            <Checkbox
+              ariaLabelledBy="deathSaveSuccessLabel"
+              id="deathSaveSuccess-2"
+            />
+            <Checkbox
+              ariaLabelledBy="deathSaveSuccessLabel"
+              id="deathSaveSuccess-3"
+            />
           </div>
-        </td>
-      </tr>
-      <tr
-        className="Combat--tr"
+        </div>
+      </div>
+    </div>
+    <div
+      className="Combat__inspiration"
+    >
+      <div
+        className="Combat__label"
+        id="inspirationLabel"
       >
-        <td
-          className="Combat--td-small"
+        Inspiration
+      </div>
+      <div
+        className="Combat__inspirationCheckbox"
+      >
+        <Checkbox
+          ariaLabelledBy="inspirationLabel"
+          id="inspirationCheckbox"
+        />
+      </div>
+    </div>
+    <div
+      className="Combat__armourClass"
+    >
+      <InputBox
+        className="Combat__input--larger"
+        id="armourClass"
+        label="Armour Class"
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="Combat__middle"
+  >
+    <div
+      className="Combat__middleSide"
+    >
+      <div
+        className="Combat__passivePerception"
+      >
+        <InputBox
+          className="Combat__input--larger"
+          id="passivePerception"
+          label="Passive Perception"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          type="number"
+        />
+      </div>
+      <div
+        className="Combat__speed"
+      >
+        <InputBox
+          className="Combat__input--larger"
+          id="speed"
+          label="Speed"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          type="number"
+        />
+      </div>
+    </div>
+    <div
+      className="Combat__hitPoints"
+    >
+      <div
+        className="Combat__hitPointsHeader"
+      >
+        <div
+          className="Combat__hitPointsBtn"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex="0"
+          unselectable="on"
         >
-          <div
-            className="Combat--box"
-          >
-            <div
-              className="Combat__label"
-            >
-              Hit Dice
-            </div>
-            <div
-              className="Combat__input"
-            >
-              <Input
-                className="Combat__input--larger"
-                id="hitDice"
-                onChange={[Function]}
-                type="text"
-              />
-            </div>
-          </div>
-        </td>
-        <td
-          className="Combat--td-largest"
+          +
+        </div>
+        <div
+          className="Combat__label"
+          id="hitPointsLabel"
         >
-          <div
-            className="Combat--box"
+          Hit Points
+        </div>
+        <div
+          className="Combat__hitPointsBtn"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex="0"
+          unselectable="on"
+        >
+          -
+        </div>
+      </div>
+      <div
+        className="Combat__hitPointsInput"
+      >
+        <Input
+          ariaLabelledBy="hitPointsLabel"
+          className="Combat__input--largest"
+          id="hitPoints"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          type="number"
+        />
+      </div>
+      <div
+        className="Combat__hitPointsTotal"
+      >
+        <div
+          id="hitsPointsTotalLabel"
+        >
+          Total:
+        </div>
+        <Input
+          ariaLabelledBy="hitsPointsTotalLabel"
+          className="Combat__hitPointsTotalInput"
+          id="hitPoints"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          type="number"
+        />
+        <button
+          className="Combat__hitPointsTotalEditBtn"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-pencil-alt fa-w-16 Combat__hitPointsTotalEditBtnSvg"
+            data-icon="pencil-alt"
+            data-prefix="fas"
+            focusable="true"
+            height={12}
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div
-              className="Combat__label"
-            >
-              Temporary Hit Points
-            </div>
-            <div
-              className="Combat__input"
-            >
-              <Input
-                className="Combat__input--larger"
-                id="tempHitPoints"
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                type="number"
-              />
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+            <path
+              d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      className="Combat__middleSide"
+    >
+      <div
+        className="Combat__initiativeBonus"
+      >
+        <InputBox
+          className="Combat__input--larger"
+          id="initiativeBonus"
+          label="Initiative Bonus"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          type="number"
+        />
+      </div>
+      <div
+        className="Combat__proficiencyBonus"
+      >
+        <InputBox
+          className="Combat__input--larger"
+          id="proficiencyBonus"
+          label="Proficiency Bonus"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          type="number"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="Combat__bottom"
+  >
+    <div
+      className="Combat__hitDice"
+    >
+      <InputBox
+        className="Combat__input--larger"
+        id="hitDice"
+        label="Hit Dice"
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+    <div
+      className="Combat__tempHitPoints"
+    >
+      <InputBox
+        className="Combat__input--larger"
+        id="tempHitPoints"
+        label="Temporary Hit Points"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        type="number"
+      />
+    </div>
+  </div>
 </div>
 `;
