@@ -16,7 +16,26 @@ exports[`App component rendering renders App 1`] = `
       disabled={false}
       name="Inventory"
     >
-      Inventory
+      <Carousel>
+        <CarouselItem>
+          <Memo(Connect(Ability))
+            id="strength"
+            name="Strength"
+          />
+        </CarouselItem>
+        <CarouselItem>
+          <Memo(Connect(Ability))
+            id="constitution"
+            name="Constitution"
+          />
+        </CarouselItem>
+        <CarouselItem>
+          <Memo(Connect(Ability))
+            id="dexterity"
+            name="Dexterity"
+          />
+        </CarouselItem>
+      </Carousel>
     </Tab>
     <Tab
       disabled={false}

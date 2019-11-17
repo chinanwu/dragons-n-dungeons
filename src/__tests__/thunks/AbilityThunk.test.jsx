@@ -1,19 +1,22 @@
-import calculateAbilityModifier from '../../functions/calculateAbilityModifier';
-import { applyAbilityProxy } from '../../thunk/AbilityThunk.jsx';
 import {
-  editDexterity,
-  editStrength,
-  editConstitution,
-  editWisdom,
-  editIntelligence,
   editCharisma,
+  editConstitution,
+  editDexterity,
+  editIntelligence,
+  editStrength,
+  editWisdom,
 } from '../../actions/AbilityActions';
+import { editArmourClass } from '../../actions/CombatActions.js';
+import calculateAbilityModifier from '../../functions/calculateAbilityModifier';
+import calculateArmourClass from '../../functions/calculateArmourClass.js';
+import { applyAbilityProxy } from '../../thunk/AbilityThunk.jsx';
 
 jest.unmock('../../thunk/AbilityThunk.jsx');
 jest.unmock('../../constants/Abilities');
 
 describe('AbilityThunk', () => {
   editDexterity.mockReturnValue('editDexterity');
+  editArmourClass.mockReturnValue('editArmourClass');
   editStrength.mockReturnValue('editStrength');
   editConstitution.mockReturnValue('editConstitution');
   editWisdom.mockReturnValue('editWisdom');
@@ -22,11 +25,16 @@ describe('AbilityThunk', () => {
 
   describe('applyAbilityProxy', () => {
     it('dispatches editDexterity', () => {
+      calculateArmourClass.mockReturnValue(-5);
       calculateAbilityModifier.mockReturnValue(-5);
       const dispatch = jest.fn();
       applyAbilityProxy('Dexterity', 0)(dispatch);
-      expect(dispatch.mock.calls).toEqual([['editDexterity']]);
+      expect(dispatch.mock.calls).toEqual([
+        ['editDexterity'],
+        ['editArmourClass'],
+      ]);
       expect(editDexterity.mock.calls).toEqual([[{ score: 0, modifier: -5 }]]);
+      expect(editArmourClass.mock.calls).toEqual([[-5]]);
     });
 
     it('dispatches editStrength', () => {
