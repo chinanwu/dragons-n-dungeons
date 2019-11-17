@@ -13,8 +13,8 @@ export const ABILITY_NAMES = {
   cha: 'Charisma',
 };
 
-export const STRENGTH_SKILLS = ['Saving Throws', 'Athletics'];
-export const CONSTITUTION_SKILLS = ['Saving Throws'];
+export const STRENGTH_SKILLS = ['Saving Throw', 'Athletics'];
+export const CONSTITUTION_SKILLS = ['Saving Throw'];
 export const DEXTERITY_SKILLS = [
   'Saving Throw',
   'Acrobatics',

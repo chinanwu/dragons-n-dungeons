@@ -8,8 +8,8 @@ import validateEvent from '../../functions/validateEvent';
 import { defaultScore } from '../../reducers/AbilityReducer';
 import { applyAbilityProxy } from '../../thunk/AbilityThunk.jsx';
 import Input from '../general/Input.jsx';
-import './Ability.less';
 
+import './Ability.less';
 import { Skill } from './Skill.jsx';
 
 export const Ability = ({
