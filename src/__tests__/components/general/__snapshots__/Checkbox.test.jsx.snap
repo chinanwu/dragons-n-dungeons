@@ -30,7 +30,7 @@ exports[`Checkbox component rendering renders Checkbox 1`] = `
 <Input
   ariaChecked={false}
   checked={false}
-  className="Checkbox"
+  className="Checkbox Test"
   id="test"
   name={null}
   onChange={[Function]}

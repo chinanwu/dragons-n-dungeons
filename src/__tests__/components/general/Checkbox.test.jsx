@@ -8,7 +8,7 @@ jest.unmock('../../../components/general/Checkbox.jsx');
 describe('Checkbox component', () => {
   describe('rendering', () => {
     it('renders Checkbox', () => {
-      const wrapper = shallow(<Checkbox id="test" />);
+      const wrapper = shallow(<Checkbox id="test" className="Test" />);
       expect(wrapper.getElement()).toMatchSnapshot();
     });
 
