@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "test": "jest -c",
+    "test-ci": "npm i && jest && codecov",
     "format": "prettier --write \"src/**/*.js\"",
     "build": "rm -rf dist && webpack -p"
   },
