@@ -1,5 +1,8 @@
 # Dragons N Dungeons
 
+[![CircleCI](https://circleci.com/gh/chinanwu/dragons-n-dungeons.svg?style=shield)](https://circleci.com/gh/chinanwu/dragons-n-dungeons)
+[![codecov](https://codecov.io/gh/chinanwu/dragons-n-dungeons/branch/master/graph/badge.svg)](https://codecov.io/gh/chinanwu/dragons-n-dungeons)
+
 ## Features
 Automatic updates of related statistics. 
 
