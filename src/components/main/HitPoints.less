@@ -1,0 +1,68 @@
+@import '../styling/fonts.less';
+@import '../styling/colours.less';
+
+.HitPoints {
+  border: 1px solid black;
+  margin-left: 12px;
+  margin-right: 12px;
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+}
+
+.HitPoints__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.HitPoints__btn {
+  cursor: pointer;
+
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.HitPoints__label {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.HitPoints__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HitPoints__input--largest {
+  text-align: center;
+  font-size: @font-72;
+}
+
+.HitPoints__total {
+  display: grid;
+  grid-template-columns: 9fr 90fr 1fr;
+  align-items: center;
+  font-size: @font-18;
+  margin-bottom: 6px;
+  margin-left: 12px;
+  margin-right: 20px;
+}
+
+.HitPoints__totalInput {
+  margin-left: 3px;
+  font-size: @font-18;
+}
+
+.HitPoints__totalEditBtn {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: inherit;
+}
+
+.HitPoints__totalEditBtnSvg {
+  color: @main-5;
+}

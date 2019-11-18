@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 import Input from './Input.jsx';
 
@@ -10,6 +10,7 @@ export const LabelledInput = ({
   label,
   type,
   value,
+  placeholder,
   onChange,
   onKeyDown,
 }) => {
@@ -23,6 +24,7 @@ export const LabelledInput = ({
         className={'LabelledInput__' + type}
         type={type}
         value={value}
+        placeholder={placeholder}
         onChange={onChange}
         onKeyDown={onKeyDown}
       />
@@ -35,6 +37,7 @@ LabelledInput.propTypes = {
   label: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  placeholder: PropTypes.string,
   onChange: PropTypes.func,
   onKeyDown: PropTypes.func,
 };

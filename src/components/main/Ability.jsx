@@ -61,7 +61,6 @@ export const Ability = ({
               type="number"
               maxLength={2}
               value={score}
-              defaultInput={defaultScore}
               ariaLabelledBy="abilityScoreLabel"
               onKeyDown={handleKeyDown}
               onChange={handleChange}
