@@ -9,12 +9,13 @@ import validateEvent from '../../functions/validateEvent';
 import { defaultState } from '../../reducers/CombatReducer';
 import { applyCombat } from '../../thunk/CombatThunk.jsx';
 import Input from '../general/Input.jsx';
-
 import './HitPoints.less';
-import './HitPointsModal.less';
+
+import HitPointsModal from './HitPointsModal.jsx';
 
 export const HitPoints = ({ hitPoints, onChange }) => {
   const [currentHp, setCurrentHp] = useState(hitPoints);
+  const [showCurrentModal, setShowCurrentModal] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   const handleChange = useCallback(
@@ -82,25 +83,17 @@ export const HitPoints = ({ hitPoints, onChange }) => {
       [setCurrentHp, currentHp]
     );
 
-  const handleEditTotalClick = useCallback(() => {
+  const handleShowModalClick = useCallback(() => {
     setShowModal(!showModal);
   }, [showModal, setShowModal]);
 
-  const handleAddTotalClick = useCallback(() => {
-    const value = isNumber(
-      document.getElementById('hitPointsModalInput').value
-    );
-    console.log('typeof hitPoints: ' + typeof hitPoints);
-    console.log('hitPoints: ' + hitPoints);
-    console.log('typeof value: ' + typeof value);
-    console.log('value: ' + value);
-    const newHp = hitPoints + value;
-    console.log(newHp);
-    value ? onChange('hitPoints', hitPoints + value) : null;
-    setShowModal(false);
-  }, [onChange]);
-
-  const handleMinusTotalClick = useCallback(() => {}, []);
+  const handleModalClick = useCallback(
+    num => {
+      onChange('hitPoints', hitPoints + num);
+      setShowModal(false);
+    },
+    [setShowModal]
+  );
 
   return (
     <div className="HitPoints">
@@ -131,17 +124,15 @@ export const HitPoints = ({ hitPoints, onChange }) => {
           -
         </div>
       </div>
-      <div className="HitPoints__input">
-        <Input
-          id="hitPoints"
-          className="HitPoints__input--largest"
-          type="number"
-          value={currentHp}
-          ariaLabelledBy="hitPointsLabel"
-          onKeyDown={handleCurrentKeyDown}
-          onChange={handleCurrentChange}
-        />
-      </div>
+      <Input
+        id="hitPoints"
+        className="HitPoints__input--largest"
+        type="number"
+        value={currentHp}
+        ariaLabelledBy="hitPointsLabel"
+        onKeyDown={handleCurrentKeyDown}
+        onChange={handleCurrentChange}
+      />
       <div className="HitPoints__total">
         <div id="hitsPointsTotalLabel">Total:</div>
         <Input
@@ -155,7 +146,7 @@ export const HitPoints = ({ hitPoints, onChange }) => {
         />
         <button
           className="HitPoints__totalEditBtn"
-          onClick={handleEditTotalClick}
+          onClick={handleShowModalClick}
         >
           <svg
             aria-hidden="true"
@@ -176,47 +167,10 @@ export const HitPoints = ({ hitPoints, onChange }) => {
         </button>
         {showModal &&
           createPortal(
-            <div
-              className="HitPointsModal"
-              style={{
-                left: document.documentElement.clientWidth / 2 - 150,
-                top: document.documentElement.clientHeight / 2,
-              }}
-            >
-              <div className="HitPointsModal__header">
-                <h1 id="hitPointsModalLabel" className="HitPointsModal__label">
-                  Edit Total Hit Points
-                </h1>
-                <button
-                  className="HitPointsModal__closeBtn"
-                  onClick={handleEditTotalClick}
-                >
-                  X
-                </button>
-              </div>
-              <Input
-                id="hitPointsModalInput"
-                className="HitPointsModal__input"
-                type="number"
-                placeholder={0}
-                ariaLabelledBy="hitPointsModalLabel"
-                onChange={() => null}
-              />
-              <div>
-                <button
-                  className="HitPointsModal__addBtn"
-                  onClick={handleAddTotalClick}
-                >
-                  +
-                </button>
-                <button
-                  className="HitPointsModal__minusBtn"
-                  onClick={handleMinusTotalClick}
-                >
-                  -
-                </button>
-              </div>
-            </div>,
+            <HitPointsModal
+              onClick={handleModalClick}
+              onCloseModalClick={handleShowModalClick}
+            />,
             document.body
           )}
       </div>

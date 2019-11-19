@@ -67,10 +67,14 @@ export default handleActions(
       ...state,
       speed: payload,
     }),
-    [editHitPoints]: (state, { payload }) => ({
-      ...state,
-      hitPoints: payload,
-    }),
+    [editHitPoints]: (state, { payload }) => {
+      console.log('payload');
+      console.log(payload);
+      return {
+        ...state,
+        hitPoints: payload,
+      };
+    },
     [editInitiativeBonus]: (state, { payload }) => ({
       ...state,
       initiativeBonus: payload,
