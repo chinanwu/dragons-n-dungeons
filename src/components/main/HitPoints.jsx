@@ -71,11 +71,12 @@ export const HitPoints = ({ hitPoints, onChange }) => {
             !event.altKey &&
             !event.metaKey
           ) {
-            if (event.keyCode) {
-              if (event.keyCode === enterBtn || event.keyCode === spaceBtn) {
-                event.preventDefault();
-                setCurrentHp(hp => callback(hp));
-              }
+            if (
+              event.keyCode &&
+              (event.keyCode === enterBtn || event.keyCode === spaceBtn)
+            ) {
+              event.preventDefault();
+              setCurrentHp(hp => callback(hp));
             }
           }
         }
