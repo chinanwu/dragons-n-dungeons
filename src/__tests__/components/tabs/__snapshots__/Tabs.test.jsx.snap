@@ -41,6 +41,136 @@ exports[`Tabs component behaviour switch to tab when tab list button is clicked 
 </div>
 `;
 
+exports[`Tabs component behaviour when end is pressed, go to last active tab 1`] = `
+<div
+  className="Tabs"
+  role="tabs"
+>
+  <Memo(Connect(TabList))
+    activeIndex={0}
+    footer={null}
+    header={null}
+    id="tabList"
+    list={
+      Array [
+        Object {
+          "disabled": false,
+          "name": "Test-tab",
+        },
+        Object {
+          "disabled": false,
+          "name": "Test-tab2",
+        },
+        Object {
+          "disabled": true,
+          "name": "Test-tab3",
+        },
+      ]
+    }
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  />
+  <Memo(Connect(TabPanels))
+    activeIndex={0}
+    id="tabPanels"
+    panels={
+      Array [
+        Array [
+          Object {
+            "props": Object {
+              "children": "Test 1",
+            },
+            "type": "p",
+          },
+        ],
+        Array [
+          Object {
+            "props": Object {
+              "children": "Test 2",
+            },
+            "type": "p",
+          },
+        ],
+        Array [
+          Object {
+            "props": Object {
+              "children": "Test 3",
+            },
+            "type": "p",
+          },
+        ],
+      ]
+    }
+  />
+  
+</div>
+`;
+
+exports[`Tabs component behaviour when home is pressed, go to first active tab 1`] = `
+<div
+  className="Tabs"
+  role="tabs"
+>
+  <Memo(Connect(TabList))
+    activeIndex={1}
+    footer={null}
+    header={null}
+    id="tabList"
+    list={
+      Array [
+        Object {
+          "disabled": true,
+          "name": "Test-tab",
+        },
+        Object {
+          "disabled": false,
+          "name": "Test-tab2",
+        },
+        Object {
+          "disabled": false,
+          "name": "Test-tab3",
+        },
+      ]
+    }
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  />
+  <Memo(Connect(TabPanels))
+    activeIndex={1}
+    id="tabPanels"
+    panels={
+      Array [
+        Array [
+          Object {
+            "props": Object {
+              "children": "Test 1",
+            },
+            "type": "p",
+          },
+        ],
+        Array [
+          Object {
+            "props": Object {
+              "children": "Test 2",
+            },
+            "type": "p",
+          },
+        ],
+        Array [
+          Object {
+            "props": Object {
+              "children": "Test 3",
+            },
+            "type": "p",
+          },
+        ],
+      ]
+    }
+  />
+  
+</div>
+`;
+
 exports[`Tabs component behaviour when keydown with unsupported keys, do not prevent default 1`] = `
 <div
   className="Tabs"

@@ -1,11 +1,11 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { Ability, mapStateToProps } from '../../../components/main/Ability.jsx';
+import { Ability, mapStateToProps } from '../../../components/main/Ability';
 import isNumber from '../../../functions/isNumber';
 import validateEvent from '../../../functions/validateEvent';
 
-jest.unmock('../../../components/main/Ability.jsx');
+jest.unmock('../../../components/main/Ability');
 jest.unmock('../../../constants/Abilities');
 
 describe('Ability component', () => {

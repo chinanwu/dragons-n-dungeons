@@ -17,6 +17,7 @@ exports[`TabPanels component rendering renders TabPanels with panels 1`] = `
   className="TabPanels"
 >
   <div
+    aria-expanded={true}
     aria-labelledby="tabButton__0"
     id="tabPanel__0"
     role="tabpanel"
@@ -24,6 +25,7 @@ exports[`TabPanels component rendering renders TabPanels with panels 1`] = `
     Some things
   </div>
   <div
+    aria-expanded={false}
     aria-labelledby="tabButton__1"
     id="tabPanel__1"
     role="tabpanel"

@@ -3,6 +3,7 @@
 exports[`TabList component rendering renders TabList 1`] = `
 <div
   aria-label="Tabs"
+  aria-orientation="horizontal"
   className="TabList"
   role="tablist"
 >
@@ -18,6 +19,7 @@ exports[`TabList component rendering renders TabList 1`] = `
 exports[`TabList component rendering renders TabList with empty list 1`] = `
 <div
   aria-label="Tabs"
+  aria-orientation="horizontal"
   className="TabList"
   role="tablist"
 >
@@ -33,6 +35,7 @@ exports[`TabList component rendering renders TabList with empty list 1`] = `
 exports[`TabList component rendering renders TabList with list 1`] = `
 <div
   aria-label="Tabs"
+  aria-orientation="horizontal"
   className="TabList"
   role="tablist"
 >

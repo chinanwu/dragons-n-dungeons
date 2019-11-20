@@ -6,11 +6,11 @@ import { ABILITY_SKILLS } from '../../constants/Abilities';
 import isNumber from '../../functions/isNumber';
 import validateEvent from '../../functions/validateEvent';
 import { defaultScore } from '../../reducers/AbilityReducer';
-import { applyAbilityProxy } from '../../thunk/AbilityThunk.jsx';
-import Input from '../general/Input.jsx';
-
+import { applyAbilityProxy } from '../../thunk/AbilityThunk';
+import Input from '../general/Input';
 import './Ability.less';
-import { Skill } from './Skill.jsx';
+
+import Skill from './Skill';
 
 export const Ability = ({
   id,

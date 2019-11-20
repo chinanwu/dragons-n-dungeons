@@ -1,6 +1,7 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import { TabList, mapStateToProps } from '../../../components/tabs/TabList.jsx';
+
+import { mapStateToProps, TabList } from '../../../components/tabs/TabList.jsx';
 
 jest.unmock('../../../components/tabs/TabList.jsx');
 jest.unmock('../../../functions/getThemeClassName');
