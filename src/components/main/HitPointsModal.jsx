@@ -1,3 +1,4 @@
+import FocusTrap from 'focus-trap-react';
 import PropTypes from 'prop-types';
 import React, { useCallback, useState } from 'react';
 
@@ -28,43 +29,47 @@ export const HitPointsModal = ({ onClick, onCloseModalClick }) => {
       onClick(input * sign);
     }, [input]);
 
-  // TODO: No inline styling
   return (
-    <div
-      className="HitPointsModal"
-      style={{
-        left: document.documentElement.clientWidth / 2 - 150,
-        top: document.documentElement.clientHeight / 2,
-      }}
-    >
-      <div className="HitPointsModal__header">
-        <h1 id="hitPointsModalLabel" className="HitPointsModal__label">
-          Edit Total Hit Points
-        </h1>
-        <button
-          className="HitPointsModal__closeBtn"
-          onClick={onCloseModalClick}
-        >
-          X
-        </button>
+    <FocusTrap>
+      <div
+        className="HitPointsModal"
+        style={{
+          left: document.documentElement.clientWidth / 2 - 150,
+          top: document.documentElement.clientHeight / 2,
+        }}
+      >
+        <div className="HitPointsModal__header">
+          <h1 id="hitPointsModalLabel" className="HitPointsModal__label">
+            Edit Total Hit Points
+          </h1>
+          <button
+            className="HitPointsModal__closeBtn"
+            onClick={onCloseModalClick}
+          >
+            X
+          </button>
+        </div>
+        <Input
+          id="hitPointsModalInput"
+          className="HitPointsModal__input"
+          type="number"
+          value={input}
+          ariaLabelledBy="hitPointsModalLabel"
+          onChange={handleChange}
+        />
+        <div>
+          <button className="HitPointsModal__addBtn" onClick={handleClick(1)}>
+            +
+          </button>
+          <button
+            className="HitPointsModal__minusBtn"
+            onClick={handleClick(-1)}
+          >
+            -
+          </button>
+        </div>
       </div>
-      <Input
-        id="hitPointsModalInput"
-        className="HitPointsModal__input"
-        type="number"
-        value={input}
-        ariaLabelledBy="hitPointsModalLabel"
-        onChange={handleChange}
-      />
-      <div>
-        <button className="HitPointsModal__addBtn" onClick={handleClick(1)}>
-          +
-        </button>
-        <button className="HitPointsModal__minusBtn" onClick={handleClick(-1)}>
-          -
-        </button>
-      </div>
-    </div>
+    </FocusTrap>
   );
 };
 

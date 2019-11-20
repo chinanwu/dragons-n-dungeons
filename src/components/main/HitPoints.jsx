@@ -16,7 +16,6 @@ import HitPointsModal from './HitPointsModal.jsx';
 
 export const HitPoints = ({ hitPoints, onChange }) => {
   const [currentHp, setCurrentHp] = useState(hitPoints);
-  const [showCurrentModal, setShowCurrentModal] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   const handleChange = useCallback(
