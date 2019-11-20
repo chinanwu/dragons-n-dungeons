@@ -26,7 +26,6 @@ exports[`Ability component behaviour changes null input to default score 1`] = `
         <Input
           ariaLabelledBy="abilityScoreLabel"
           className="AbilityScore"
-          defaultInput={0}
           id="abilityScore"
           maxLength={2}
           onChange={[Function]}
@@ -85,7 +84,6 @@ exports[`Ability component behaviour changes out of bounds input to max or min 1
         <Input
           ariaLabelledBy="abilityScoreLabel"
           className="AbilityScore"
-          defaultInput={0}
           id="abilityScore"
           maxLength={2}
           onChange={[Function]}
@@ -144,7 +142,6 @@ exports[`Ability component behaviour changes value to be within boundaries when 
         <Input
           ariaLabelledBy="abilityScoreLabel"
           className="AbilityScore"
-          defaultInput={0}
           id="abilityScore"
           maxLength={2}
           onChange={[Function]}
@@ -203,7 +200,6 @@ exports[`Ability component behaviour changes value when up arrow is pressed 1`] 
         <Input
           ariaLabelledBy="abilityScoreLabel"
           className="AbilityScore"
-          defaultInput={0}
           id="abilityScore"
           maxLength={2}
           onChange={[Function]}
@@ -262,7 +258,6 @@ exports[`Ability component behaviour does nothing  if invalid input 1`] = `
         <Input
           ariaLabelledBy="abilityScoreLabel"
           className="AbilityScore"
-          defaultInput={0}
           id="abilityScore"
           maxLength={2}
           onChange={[Function]}
@@ -321,7 +316,6 @@ exports[`Ability component behaviour does nothing if event is null 1`] = `
         <Input
           ariaLabelledBy="abilityScoreLabel"
           className="AbilityScore"
-          defaultInput={0}
           id="abilityScore"
           maxLength={2}
           onChange={[Function]}
@@ -380,7 +374,6 @@ exports[`Ability component behaviour saves changed input 1`] = `
         <Input
           ariaLabelledBy="abilityScoreLabel"
           className="AbilityScore"
-          defaultInput={0}
           id="abilityScore"
           maxLength={2}
           onChange={[Function]}
@@ -439,7 +432,6 @@ exports[`Ability component rendering renders Ability 1`] = `
         <Input
           ariaLabelledBy="abilityScoreLabel"
           className="AbilityScore"
-          defaultInput={0}
           id="abilityScore"
           maxLength={2}
           onChange={[Function]}
