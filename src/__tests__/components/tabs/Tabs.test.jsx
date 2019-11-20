@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import { Tabs, mapStateToProps } from '../../../components/tabs/Tabs.jsx';
+import { mapStateToProps, Tabs } from '../../../components/tabs/Tabs.jsx';
 
 jest.unmock('../../../components/tabs/Tabs.jsx');
 jest.unmock('../../../functions/getThemeClassName');
@@ -140,7 +140,7 @@ describe('Tabs component', () => {
       expect(preventDefault).not.toHaveBeenCalled();
     });
 
-    it('when left or up arrow is pressed, go to the tab to the left', () => {
+    it('when left is pressed, go to previous tab', () => {
       const tabs = [
         {
           type: { name: 'Tab' },
@@ -171,21 +171,16 @@ describe('Tabs component', () => {
       expect(wrapper.getElement()).toMatchSnapshot();
 
       const preventDefault = jest.fn();
-      const leftEvent = {
+      const event = {
         keyCode: 37,
         preventDefault: preventDefault,
       };
-      const upEvent = {
-        keyCode: 38,
-        preventDefault: preventDefault,
-      };
 
-      wrapper.find('#tabList').simulate('keydown', leftEvent);
-      wrapper.find('#tabList').simulate('keydown', upEvent);
-      expect(preventDefault).toHaveBeenCalledTimes(2);
+      wrapper.find('#tabList').simulate('keydown', event);
+      expect(preventDefault).toHaveBeenCalledTimes(1);
     });
 
-    it('when left is pressed and next tab is disabled, go to the next non-disabled tab', () => {
+    it('when left is pressed and previous tab is disabled, go to the first previous non-disabled tab', () => {
       const tabs = [
         {
           type: { name: 'Tab' },
@@ -217,12 +212,12 @@ describe('Tabs component', () => {
       expect(wrapper.getElement()).toMatchSnapshot();
 
       const preventDefault = jest.fn();
-      const leftEvent = {
+      const event = {
         keyCode: 37,
         preventDefault: preventDefault,
       };
 
-      wrapper.find('#tabList').simulate('keydown', leftEvent);
+      wrapper.find('#tabList').simulate('keydown', event);
       expect(preventDefault).toHaveBeenCalledTimes(1);
     });
 
@@ -257,18 +252,12 @@ describe('Tabs component', () => {
       expect(wrapper.getElement()).toMatchSnapshot();
 
       const preventDefault = jest.fn();
-      const rightEvent = {
+      const event = {
         keyCode: 39,
         preventDefault: preventDefault,
       };
-      const downEvent = {
-        keyCode: 40,
-        preventDefault: preventDefault,
-      };
-
-      wrapper.find('#tabList').simulate('keydown', rightEvent);
-      wrapper.find('#tabList').simulate('keydown', downEvent);
-      expect(preventDefault).toHaveBeenCalledTimes(2);
+      wrapper.find('#tabList').simulate('keydown', event);
+      expect(preventDefault).toHaveBeenCalledTimes(1);
     });
 
     it('when right is pressed, and next is disabled, go to the next non-disabled tab', () => {
@@ -302,12 +291,92 @@ describe('Tabs component', () => {
       expect(wrapper.getElement()).toMatchSnapshot();
 
       const preventDefault = jest.fn();
-      const rightEvent = {
+      const event = {
         keyCode: 39,
         preventDefault: preventDefault,
       };
 
-      wrapper.find('#tabList').simulate('keydown', rightEvent);
+      wrapper.find('#tabList').simulate('keydown', event);
+      expect(preventDefault).toHaveBeenCalledTimes(1);
+    });
+
+    it('when home is pressed, go to first active tab', () => {
+      const tabs = [
+        {
+          type: { name: 'Tab' },
+          props: {
+            name: 'Test-tab',
+            disabled: true,
+            children: [{ type: 'p', props: { children: 'Test 1' } }],
+          },
+        },
+        {
+          type: { name: 'Tab' },
+          props: {
+            name: 'Test-tab2',
+            disabled: false,
+            children: [{ type: 'p', props: { children: 'Test 2' } }],
+          },
+        },
+        {
+          type: { name: 'Tab' },
+          props: {
+            name: 'Test-tab3',
+            disabled: false,
+            children: [{ type: 'p', props: { children: 'Test 3' } }],
+          },
+        },
+      ];
+      const wrapper = shallow(<Tabs defaultActive={0} children={tabs} />);
+      expect(wrapper.getElement()).toMatchSnapshot();
+
+      const preventDefault = jest.fn();
+      const event = {
+        keyCode: 36,
+        preventDefault: preventDefault,
+      };
+
+      wrapper.find('#tabList').simulate('keydown', event);
+      expect(preventDefault).toHaveBeenCalledTimes(1);
+    });
+
+    it('when end is pressed, go to last active tab', () => {
+      const tabs = [
+        {
+          type: { name: 'Tab' },
+          props: {
+            name: 'Test-tab',
+            disabled: false,
+            children: [{ type: 'p', props: { children: 'Test 1' } }],
+          },
+        },
+        {
+          type: { name: 'Tab' },
+          props: {
+            name: 'Test-tab2',
+            disabled: false,
+            children: [{ type: 'p', props: { children: 'Test 2' } }],
+          },
+        },
+        {
+          type: { name: 'Tab' },
+          props: {
+            name: 'Test-tab3',
+            disabled: true,
+            children: [{ type: 'p', props: { children: 'Test 3' } }],
+          },
+        },
+      ];
+      const wrapper = shallow(<Tabs defaultActive={0} children={tabs} />);
+      expect(wrapper.getElement()).toMatchSnapshot();
+
+      const preventDefault = jest.fn();
+      const event = {
+        keyCode: 35,
+        preventDefault: preventDefault,
+      };
+
+      wrapper.find('#tabList').simulate('keydown', event);
       expect(preventDefault).toHaveBeenCalledTimes(1);
     });
   });

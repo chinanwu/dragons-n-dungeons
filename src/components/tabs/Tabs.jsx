@@ -2,10 +2,16 @@ import PropTypes from 'prop-types';
 import React, { useCallback, useState } from 'react';
 import { connect } from 'react-redux';
 
+import {
+  endBtn,
+  homeBtn,
+  leftArrow,
+  rightArrow,
+} from '../../constants/Keycodes';
 import getThemeClassName from '../../functions/getThemeClassName';
+
 import TabList from './TabList.jsx';
 import TabPanels from './TabPanels.jsx';
-
 import './Tabs.less';
 
 const TabTypes = {
@@ -68,6 +74,14 @@ const getFirstActive = list => {
   }
 };
 
+const getLastActive = list => {
+  for (let i = list.length - 1; i > 0; i--) {
+    if (!list[i].disabled) {
+      return i;
+    }
+  }
+};
+
 export const Tabs = ({ defaultActive, children, theme }) => {
   if (children === undefined || children.length === 0) {
     return null;
@@ -96,8 +110,7 @@ export const Tabs = ({ defaultActive, children, theme }) => {
         !event.metaKey
       ) {
         const keyCode = event.keyCode;
-        if (keyCode === 39 || keyCode === 40) {
-          // right or down
+        if (keyCode === rightArrow) {
           event.preventDefault();
 
           // This is done since React state doesn't immediately update
@@ -112,8 +125,7 @@ export const Tabs = ({ defaultActive, children, theme }) => {
 
             return nextIndex;
           });
-        } else if (keyCode === 37 || keyCode === 38) {
-          // left or up
+        } else if (keyCode === leftArrow) {
           event.preventDefault();
 
           // This is done since React state doesn't immediately update
@@ -129,6 +141,12 @@ export const Tabs = ({ defaultActive, children, theme }) => {
 
             return nextIndex;
           });
+        } else if (keyCode === homeBtn) {
+          event.preventDefault();
+          setActiveIndex(getFirstActive(tabList));
+        } else if (keyCode === endBtn) {
+          event.preventDefault();
+          setActiveIndex(getLastActive(tabList));
         }
       }
     },

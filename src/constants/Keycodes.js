@@ -6,3 +6,6 @@ export const downArrow = 40;
 
 export const enterBtn = 13;
 export const spaceBtn = 32;
+
+export const endBtn = 35;
+export const homeBtn = 36;

@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import getThemeClassName from '../../functions/getThemeClassName';
@@ -40,6 +40,7 @@ export const TabList = ({
       className={getThemeClassName('TabList', theme)}
       role="tablist"
       aria-label="Tabs"
+      aria-orientation="horizontal"
     >
       <div className="TabList--left">
         {header}

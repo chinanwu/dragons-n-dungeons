@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import getThemeClassName from '../../functions/getThemeClassName';
@@ -22,6 +22,8 @@ export const TabPanels = ({ panels, activeIndex, theme }) => {
         <div
           id={`tabPanel__${index}`}
           className={getClassNames(index === activeIndex, theme)}
+          role="tabpanel"
+          aria-expanded={index === activeIndex}
           aria-labelledby={`tabButton__${index}`}
           key={`TabPanel__${index}`}
         >

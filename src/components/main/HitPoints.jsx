@@ -9,6 +9,7 @@ import validateEvent from '../../functions/validateEvent';
 import { defaultState } from '../../reducers/CombatReducer';
 import { applyCombat } from '../../thunk/CombatThunk.jsx';
 import Input from '../general/Input.jsx';
+
 import './HitPoints.less';
 
 import HitPointsModal from './HitPointsModal.jsx';

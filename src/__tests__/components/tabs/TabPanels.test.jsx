@@ -1,8 +1,9 @@
 import { shallow } from 'enzyme';
 import React from 'react';
+
 import {
-  TabPanels,
   mapStateToProps,
+  TabPanels,
 } from '../../../components/tabs/TabPanels.jsx';
 
 jest.unmock('../../../components/tabs/TabPanels.jsx');
